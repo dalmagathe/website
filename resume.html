@@ -1,0 +1,248 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<title>Agathe DALMAZIR</title>
+</head>
+<style>
+.note {
+  font-family:'Arial';
+  font-size: 100%;
+  color: white;
+  text-align: center;
+  margin-left: 200px;
+}
+
+.sidenav {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 80px;
+  transition: 0.5s;
+
+}
+
+.sidenav a {
+  font-family:'Arial';
+  padding: 6px 6px 6px 0px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+  background-color: orange;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.card {
+  box-shadow: 0 10px 8px 0 rgba(0,0,0,0.2);
+  width: 300px;
+  background-color: white;
+  margin-left: 400px;
+}
+.card2 {
+  box-shadow: 0 10px 8px 0 rgba(0,0,0,0.2);
+  background-color: white;
+  margin-left: 730px;
+  margin-right: 200px;
+  margin-top: -546px;
+}
+
+.card3 {
+  position: relative;
+  box-shadow: 0 10px 8px 0 rgba(0,0,0,0.2);
+  background-color: white;
+  margin-left: 730px;
+  margin-right: 200px;
+  margin-top: 30px;
+  
+}
+
+.container {
+  padding: 2px 16px;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+#main2 {
+  transition: margin-left .5s;
+  padding: 20px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+.rcorners1 {
+  border-radius: 25px;
+  background: #73AD21;
+  width: 200px;
+  height: 20px;
+  position: relative;
+}
+
+.rcorners2 {
+  border-radius: 25px;
+  background: green;
+  width: 100px;
+  height: 20px;
+  position: absolute;
+  top: 0px;
+  left:0px;
+  text-align: center;
+}
+
+
+} 
+
+</style>
+
+<body style="background-color:rgb(255, 135, 12);">
+
+<span style="font-size:30px; padding-left: 50px; color:white ; font-family:'Arial'; cursor:pointer" onclick="openNav()">&#9776; open</span>
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="testPage.html">
+    <i class="fa fa-fw fa-home"></i>
+    <p>Home</p>
+  </a>
+  <a href="about.html">
+    <i class="fa fa-user"></i> 
+    <p>About</p>
+  </a>
+  <a href="resume.html">
+    <i class="fa fa-wrench"></i> 
+    <p>Resume</p>
+  </a>
+  <a href="hobbies.html">
+    <i class="  fa fa-puzzle-piece"></i> 
+    <p>Hobbies</p>
+  </a>
+  <a href="contact.html">
+    <i class="fa fa-address-book-o"></i> 
+    <p>Contact</p>
+  </a>
+</div>
+
+<div id="main2">
+  <div class="card" >
+    <img src="img_avatar.png" alt="Avatar" style="width:100%">
+    <div class="container">
+      <h4><b>John Doe</b></h4> 
+      <p>Architect & Engineer</p>
+      <p><i class="fa fa-briefcase fa-fw"></i>Designer</p>
+      <p><i class="fa fa-home fa-fw"></i>London, UK</p>
+      <p><i class="fa fa-envelope fa-fw"></i>ex@mail.com</p>
+      <p><i class="fa fa-phone fa-fw"></i>1224435534</p>
+      <hr>
+      <p class="w3-large"><b><i class="fa fa-asterisk fa-fw"></i>Skills</b></p>
+      <p>Adobe Photoshop</p>
+      <div class="rcorners1">
+        <div class="rcorners2">80</div>
+      </div>
+      <p>Adobe Photoshop</p>
+      <div class="rcorners1">
+        <div class="rcorners2">80</div>
+      </div>
+      <hr>
+      <p<i class="fa fa-globe fa-fw"></i>Languages</b></p>
+      <p>Adobe Photoshop</p>
+      <div class="rcorners1">
+        <div class="rcorners2">80</div>
+      </div>    
+    </div>
+  </div>
+
+  <div class="card2" >
+    <img src="img_avatar.png" alt="Avatar" style="width:100%">
+    <div class="container">
+      <h4><b>John Doe</b></h4> 
+      <p>Architect & Engineer</p>
+      <p><i class="fa fa-briefcase fa-fw"></i>Designer</p>
+      <p><i class="fa fa-home fa-fw"></i>London, UK</p>
+      <p><i class="fa fa-envelope fa-fw"></i>ex@mail.com</p>
+      <p><i class="fa fa-phone fa-fw"></i>1224435534</p>
+      <hr>
+      <p class="w3-large"><b><i class="fa fa-asterisk fa-fw"></i>Skills</b></p>
+      <p>Adobe Photoshop</p>
+      <div class="rcorners1">
+        <div class="rcorners2">80</div>
+      </div>
+      <p>Adobe Photoshop</p>
+      <div class="rcorners1">
+        <div class="rcorners2">80</div>
+      </div>
+      <hr>
+      <p<i class="fa fa-globe fa-fw"></i>Languages</b></p>
+      <p>Adobe Photoshop</p>
+      <div class="rcorners1">
+        <div class="rcorners2">80</div>
+      </div>    
+    </div>
+  </div>
+
+  <div class="card3" >
+    <img src="img_avatar.png" alt="Avatar" style="width:100%">
+    <div class="container">
+      <h4><b>John Doe</b></h4> 
+      <p>Architect & Engineer</p>
+      <p><i class="fa fa-briefcase fa-fw"></i>Designer</p>
+      <p><i class="fa fa-home fa-fw"></i>London, UK</p>
+      <p><i class="fa fa-envelope fa-fw"></i>ex@mail.com</p>
+      <p><i class="fa fa-phone fa-fw"></i>1224435534</p>
+      <hr>
+      <p class="w3-large"><b><i class="fa fa-asterisk fa-fw"></i>Skills</b></p>
+      <p>Adobe Photoshop</p>
+      <div class="rcorners1">
+        <div class="rcorners2">80</div>
+      </div>
+      <p>Adobe Photoshop</p>
+      <div class="rcorners1">
+        <div class="rcorners2">80</div>
+      </div>
+      <hr>
+      <p<i class="fa fa-globe fa-fw"></i>Languages</b></p>
+      <p>Adobe Photoshop</p>
+      <div class="rcorners1">
+        <div class="rcorners2">80</div>
+      </div>    
+    </div>
+  </div>
+</div>
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "200px";
+  document.getElementById("main2").style.marginLeft = "0px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main2").style.marginLeft= "-200px";
+}
+</script>
+
+</body>
+</html>
