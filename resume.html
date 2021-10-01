@@ -88,10 +88,31 @@
   transition: margin-left .5s;
   padding: 20px;
 }
+#btn {
+}
 
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
+#btn2 {
+}
+#closebtn1 {
+}
+#closebtn2 {
+}
+
+body {
+  background-color:rgb(255, 135, 12);
+}
+
+@media screen and (max-width: 1000px){
+  .sidenav {width: 0px;}
+  .card {margin-left: 50px;}
+  .card2 {margin-left: 370px; margin-right: 50px;}
+  .card3 {margin-left: 370px; margin-right: 50px;}  
+  #btn {display: none;}
+  #closebtn1 {display: none;}
+}
+@media screen and (min-width: 999px){
+  #btn2 {display: none;}
+  #closebtn2 {display: none;}
 }
 
 .rcorners1 {
@@ -112,18 +133,22 @@
   left:0px;
   text-align: center;
 }
-
-
 } 
 
 </style>
 
-<body style="background-color:rgb(255, 135, 12);">
+<div id="btn">
+  <span style="font-size:30px; padding-left: 50px; color:white ; font-family:'Arial'; cursor:pointer" onclick="openNav()">&#9776; open</span>
+</div>
 
-<span style="font-size:30px; padding-left: 50px; color:white ; font-family:'Arial'; cursor:pointer" onclick="openNav()">&#9776; open</span>
+<div id="btn2">
+  <span style="font-size:30px; padding-left: 50px; color:white ; font-family:'Arial'; cursor:pointer" onclick="openNav2()">&#9776; open2</span>
+</div>
+
 
 <div id="mySidenav" class="sidenav">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="javascript:void(0)" class="closebtn" id="closebtn1" onclick="closeNav()">&times;</a>
+  <a href="javascript:void(0)" class="closebtn" id="closebtn2" onclick="closeNav2()">&times;</a>
   <a href="testPage.html">
     <i class="fa fa-fw fa-home"></i>
     <p>Home</p>
@@ -233,7 +258,7 @@
 </div>
 
 <script>
-function openNav() {
+  function openNav() {
   document.getElementById("mySidenav").style.width = "200px";
   document.getElementById("main2").style.marginLeft = "0px";
 }
@@ -241,6 +266,14 @@ function openNav() {
 function closeNav() {
   document.getElementById("mySidenav").style.width = "0";
   document.getElementById("main2").style.marginLeft= "-200px";
+}
+
+  function openNav2() {
+  document.getElementById("mySidenav").style.width = "200px";
+}
+
+function closeNav2() {
+  document.getElementById("mySidenav").style.width = "0";
 }
 </script>
 
