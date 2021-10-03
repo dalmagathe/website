@@ -171,20 +171,34 @@ body {
   text-align: center;
 }
 
-
 .aller {
   animation-direction: normal;
   animation-duration: 2s;
   animation-name: glissement;
 }
 .aller2 {
-  position: absolute;
-  top: -500px;
+  display: block;
   animation-direction: normal;
   animation-duration: 2s;
-  animation-delay: 2s;
   animation-name: glissements;
-  animation
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Create four equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 25%;
+  padding: 10px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 @keyframes glissement {
@@ -196,8 +210,20 @@ body {
   }
 }
 @keyframes glissements {
-  0% { top : 0px; opacity: 0%}
-  100% { top : 500px; opacity: 100%}
+  from {
+    transform: translateY(-500px);
+  }
+  to {
+    transform: translateY(20px);
+  }
+}
+
+.hide{
+    display:none;
+}
+
+.show{
+    display:inline-block;
 }
 
 </style>
@@ -243,9 +269,20 @@ body {
 <div class="containerBottom">
 </div>
 
-<div class="aller" style="display:inline-block"><img src="camera.png" alt="Agathe avatar" style="width:500px;"></div>
-<div class="aller2 opa" style="display:inline-block"><img src="hikking.png" alt="Agathe avatar" style="width:500px" ali></div>
-
+<div class="row">
+  <div class="column">
+    <div class="aller" style="display:inline-block"><img src="camera.png" alt="Agathe avatar"></div>
+  </div>
+  <div class="column">
+    <div id="test" class="hide"><img src="hikking.png" alt="Agathe avatar"></div>
+  </div>
+  <div class="column">
+    <div id="test2" class="hide"><img src="plane.png" alt="Agathe avatar"></div>
+  </div>
+  <div class="column">
+    <div id="test3" class="hide"><img src="running.png" alt="Agathe avatar"></div>
+  </div>
+</div>
 
 <script>
   function openNav() {
@@ -265,6 +302,41 @@ function closeNav() {
 function closeNav2() {
   document.getElementById("mySidenav").style.width = "0";
 }
+
+window.onload=function()  //executes when the page finishes loading
+{
+    setTimeout(func1, 2000);  //sets a timer which calls function func1 after 2,000 milliseconds = 2 secs.
+    setTimeout(func2, 2000);
+    setTimeout(func3, 4000);  //sets a timer which calls function func1 after 2,000 milliseconds = 2 secs.
+    setTimeout(func4, 4000);
+    setTimeout(func5, 6000);  //sets a timer which calls function func1 after 2,000 milliseconds = 2 secs.
+    setTimeout(func6, 6000);  //sets a timer which calls function func1 after 2,000 milliseconds = 2 secs.
+};
+function func1()
+{
+    document.getElementById("test").className="show";
+}
+function func2()
+{
+    document.getElementById("test").className="aller";
+}
+function func3()
+{
+    document.getElementById("test2").className="show";
+}
+function func4()
+{
+    document.getElementById("test2").className="aller";
+}
+function func5()
+{
+    document.getElementById("test3").className="show";
+}
+function func6()
+{
+    document.getElementById("test3").className="aller";
+}
+
 </script>
 
 </body>
