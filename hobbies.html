@@ -11,7 +11,7 @@
   font-size: 100%;
   color: white;
   text-align: center;
-  margin-left: 200px;
+  margin-left: 0px;
 }
 
 .sidenav {
@@ -52,80 +52,8 @@
   margin-left: 50px;
 }
 
-.card {
-  box-shadow: 0 10px 8px 0 rgba(0,0,0,0.2);
-  width: 300px;
-  background-color: white;
-  margin-left: 400px;
-  padding-bottom: 30px;
-
-}
-.card2 {
-  position: relative;
-  box-shadow: 0 10px 8px 0 rgba(0,0,0,0.2);
-  background-color: white;
-  margin-left: 730px;
-  margin-right: 200px;
-  margin-top: -1771px;
-}
-
-.card3 {
-  position: relative;
-  box-shadow: 0 10px 8px 0 rgba(0,0,0,0.2);
-  background-color: white;
-  margin-left: 730px;
-  margin-right: 200px;
-  margin-top: 30px;
-}
-
-.card4 {
-  position: relative;
-  box-shadow: 0 10px 8px 0 rgba(0,0,0,0.2);
-  background-color: white;
-  margin-left: 730px;
-  margin-right: 200px;
-  margin-top: 30px;
-}
-.cardBottom{
-  position: relative;
-  box-shadow: 0 10px 8px 0 rgba(0,0,0,0.2);
-  background-color: white;
-  margin-left: 730px;
-  margin-right: 200px;
-  margin-top: 30px;
-}
-
-.container {
-  padding: 2px 16px;
-  font-family:'Arial';
-  font-size: 100%;
-}
-
-.containerBottom {
-  position: relative;
-  padding: 70px 50px;
-  background-color: white;
-  bottom: -640px;
-  margin-right: -28px;
-  margin-left: -28px;
-}
-
-img {
-  vertical-align: middle;
-}
-
-
-#main {
-  transition: margin-left .5s;
-  padding: 16px;
-}
-#main2 {
-  transition: margin-left .5s;
-  padding: 20px;
-}
 #btn {
 }
-
 #btn2 {
 }
 #closebtn1 {
@@ -140,10 +68,6 @@ body {
 
 @media screen and (max-width: 1000px){
   .sidenav {width: 0px;}
-  .card {margin-left: 50px;}
-  .card2 {margin-left: 370px; margin-right: 50px;}
-  .card3 {margin-left: 370px; margin-right: 50px;}
-  .card4 {margin-left: 370px; margin-right: 50px;}  
   #btn {display: none;}
   #closebtn1 {display: none;}
 }
@@ -152,35 +76,25 @@ body {
   #closebtn2 {display: none;}
 }
 
-.rcorners1 {
-  border-radius: 25px;
-  background: #73AD21;
-  width: 200px;
-  height: 20px;
-  position: relative;
-}
-
-.rcorners2 {
-  border-radius: 25px;
-  background: green;
-  width: 100px;
-  height: 20px;
-  position: absolute;
-  top: 0px;
-  left:0px;
-  text-align: center;
-}
-
 .aller {
   animation-direction: normal;
   animation-duration: 2s;
   animation-name: glissement;
+  text-align: center;
+  position: relative;
+  margin-top: 200px;
 }
 .aller2 {
   display: block;
   animation-direction: normal;
   animation-duration: 2s;
   animation-name: glissements;
+  text-align: center;
+}
+
+.testPosition {
+  position: absolute;
+  margin-top: 50px;
 }
 
 * {
@@ -206,7 +120,7 @@ body {
     transform: translateY(-500px);
   }
   to {
-    transform: translateY(20px);
+    transform: translateY(0px);
   }
 }
 @keyframes glissements {
@@ -214,7 +128,7 @@ body {
     transform: translateY(-500px);
   }
   to {
-    transform: translateY(20px);
+    transform: translateY(0px);
   }
 }
 
@@ -271,16 +185,16 @@ body {
 
 <div class="row">
   <div class="column">
-    <div class="aller" style="display:inline-block"><img src="camera.png" alt="Agathe avatar"></div>
+    <div class="aller" style="display:inline-block"><img src="camera.png" alt="Agathe avatar" width="40%"></div>
   </div>
   <div class="column">
-    <div id="test" class="hide"><img src="hikking.png" alt="Agathe avatar"></div>
+    <div id="test" class="hide"><img src="hikking.png" alt="Agathe avatar" width="40%"></div>
   </div>
   <div class="column">
-    <div id="test2" class="hide"><img src="plane.png" alt="Agathe avatar"></div>
+    <div id="test2" class="hide"><img src="plane.png" alt="Agathe avatar" width="40%"></div>
   </div>
   <div class="column">
-    <div id="test3" class="hide"><img src="running.png" alt="Agathe avatar"></div>
+    <div id="test3" class="hide"><img src="running.png" alt="Agathe avatar" width="40%"></div>
   </div>
 </div>
 
@@ -334,7 +248,7 @@ function func5()
 }
 function func6()
 {
-    document.getElementById("test3").className="aller";
+    document.getElementById("test3").className="aller testPosition";
 }
 
 </script>
