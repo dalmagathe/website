@@ -139,7 +139,18 @@ body {
 .show{
     display:inline-block;
 }
-
+/* Style the tab content */
+.tabcontent {
+  float: left;
+  padding: 0px 12px;
+  border: 1px solid #ccc;
+  width: 70%;
+  border-left: none;
+  height: 300px;
+  display: none;
+}
+#London {
+}
 </style>
 
 <div id="btn">
@@ -185,10 +196,11 @@ body {
 
 <div class="row">
   <div class="column">
-    <div class="aller" style="display:inline-block"><img src="camera.png" alt="Agathe avatar" width="40%"></div>
+    <button class="tablinks" onmouseover="hobbiesTab('London')" style="background-color:rgb(255, 135, 12); border:none; height:50px"> <div class="aller" style="display:inline-block"><img src="camera.png" alt="Agathe avatar" width="40%"></div></button>
   </div>
   <div class="column">
-    <div id="test" class="hide"><img src="hikking.png" alt="Agathe avatar" width="40%"></div>
+    <button class="tablinks" onmouseover="hobbiesTab('Paris')" style="background-color:rgb(255, 135, 12); border:none" >
+    <div id="test" class="hide"><img src="hikking.png" alt="Agathe avatar" width="40%"></div></button>
   </div>
   <div class="column">
     <div id="test2" class="hide"><img src="plane.png" alt="Agathe avatar" width="40%"></div>
@@ -196,6 +208,15 @@ body {
   <div class="column">
     <div id="test3" class="hide"><img src="running.png" alt="Agathe avatar" width="40%"></div>
   </div>
+</div>
+
+<div id="London" style="display: none">
+  <h3>London</h3>
+  <p>London is the capital city of England.</p>
+</div>
+<div id="Paris" style="display: none">
+  <h3>Paris</h3>
+  <p>London is the capital city of England.grdeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee</p>
 </div>
 
 <script>
@@ -250,7 +271,11 @@ function func6()
 {
     document.getElementById("test3").className="aller testPosition";
 }
-
+function hobbiesTab(name) {
+    document.getElementById("London").style.display="none";
+    document.getElementById("Paris").style.display="none";
+    document.getElementById(name).style.display="inline-block";
+}
 </script>
 
 </body>
