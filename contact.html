@@ -8,12 +8,9 @@
 <style>
 .note {
   font-family:'Arial';
-  font-size: 100%;
-  color: white;
-  text-align: center;
-  margin-left: 200px;
+  font-size: 150%;
+  color: black;
 }
-
 .sidenav {
   height: 100%;
   width: 200px;
@@ -23,7 +20,9 @@
   left: 0;
   background-color: #111;
   overflow-x: hidden;
-  padding-top: 20px;
+  padding-top: 80px;
+  transition: 0.5s;
+
 }
 
 .sidenav a {
@@ -34,6 +33,7 @@
   color: #818181;
   display: block;
   text-align: center;
+  transition: 0.3s;
 }
 
 .sidenav a:hover {
@@ -41,23 +41,66 @@
   background-color: orange;
 }
 
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
 }
 
-} 
+.box {
+  display: flex;
+  align-items:center;
+  font-family:'Arial';
+  font-size: 130%;
+  color: black;
+}
+.card {
+  width: 600px;
+  background-color: orange;
+  margin-left: 600px;
+  padding-bottom: 30px;
+
+}
+
+#imgTest{
+  width:100px
+}
+
+@media screen and (max-width: 1000px){
+  .sidenav {width: 0px;} 
+  .card {margin-left: 50px;}
+  #imgTest {
+       width:600px
+      }
+}
 
 </style>
 
 <body style="background-color:rgb(255, 135, 12);">
 
-<div class="note">
-  <h2>I'm Agathe DALMAZIR</h2>
-  <h2>Mechatronics and software engineer</h2>
+<div>
+  <p id="imgTest"><img src="contactPhoto.png" alt="Agathe avatar" align="left" width="25%" style="padding-left: 200px; padding-top: 100px"></p>
+  <div class="card">
+  <p class="note" style="padding-left: 200px; padding-top: 160px">
+    <b>GET IN TOUCH</b> <br>
+    <hr color="black" width="500px" align="left">
+      <div class="box">
+        <p class="note"><img src="house.jpg" alt="house"><p align="center"><span style="">Suttgart, Germany</span></p>
+      </div>
+      <div class="box">
+        <p class="note" ><img src="letter.jpg" alt="house"><p align="center"><span style="">dalmagathe@gmail.com</span></p>
+      </div>
+      <div class="box">
+        <p class="note"><img src="phone.jpg" alt="house"><p align="center"><span style="">+33 (0)662981097</span></p>
+      </div>
+  </p>
+  </div>
 </div>
 
-<div class="sidenav">
+
+<div id="mySidenav" class="sidenav">
   <a href="testPage.html">
     <i class="fa fa-fw fa-home"></i>
     <p>Home</p>

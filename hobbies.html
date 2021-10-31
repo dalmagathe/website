@@ -151,6 +151,21 @@ body {
 }
 #London {
 }
+
+.card {
+  box-shadow: 0 10px 8px 0 rgba(0,0,0,0.2);
+  width: 300px;
+  background-color: white;
+  margin-left: 400px;
+  padding-bottom: 30px;
+}
+
+.container {
+  padding: 2px 16px;
+  font-family:'Arial';
+  font-size: 100%;
+}
+
 </style>
 
 <div id="btn">
@@ -196,27 +211,46 @@ body {
 
 <div class="row">
   <div class="column">
-    <button class="tablinks" onmouseover="hobbiesTab('London')" style="background-color:rgb(255, 135, 12); border:none; height:50px"> <div class="aller" style="display:inline-block"><img src="camera.png" alt="Agathe avatar" width="40%"></div></button>
+    <button class="tablinks" onmouseover="hobbiesTab('photography')" style="background-color:rgb(255, 135, 12); border:none; height:50px"> <div class="aller" style="display:inline-block"><img src="camera.png" alt="Agathe avatar" width="40%"></div></button>
   </div>
   <div class="column">
-    <button class="tablinks" onmouseover="hobbiesTab('Paris')" style="background-color:rgb(255, 135, 12); border:none" >
+    <button class="tablinks" onmouseover="hobbiesTab('hiking')" style="background-color:rgb(255, 135, 12); border:none" >
     <div id="test" class="hide"><img src="hikking.png" alt="Agathe avatar" width="40%"></div></button>
   </div>
   <div class="column">
+    <button class="tablinks" onmouseover="hobbiesTab('travel')" style="background-color:rgb(255, 135, 12); border:none" >
     <div id="test2" class="hide"><img src="plane.png" alt="Agathe avatar" width="40%"></div>
   </div>
   <div class="column">
+    <button class="tablinks" onmouseover="hobbiesTab('running')" style="background-color:rgb(255, 135, 12); border:none" >
     <div id="test3" class="hide"><img src="running.png" alt="Agathe avatar" width="40%"></div>
   </div>
 </div>
 
-<div id="London" style="display: none">
+<div id="photography" style="display: none">
   <h3>London</h3>
   <p>London is the capital city of England.</p>
+  <div><img src="map.png" alt="Agathe avatar" width="100%"></div>
 </div>
-<div id="Paris" style="display: none">
-  <h3>Paris</h3>
-  <p>London is the capital city of England.grdeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee</p>
+<div class="note" id="hiking" style="display: none">
+  <h3>HIKING</h3>
+  <p>Here are some pictures of my hikes</p>
+  <div><img src="GOPR0818.JPG" alt="Agathe avatar" width="100%"></div>
+  <div><img src="20200807_072255.JPG" alt="Agathe avatar" width="100%"></div>
+</div>
+<div class="note" id="travel" style="display: none">
+  <h3>TRAVEL</h3>
+  <p>On the map you can see the country that I visited.</p>
+  <div><img src="map.png" alt="Agathe avatar" width="100%"></div>
+  <p>I stayed in Europe. My goal now is to visit other continents and discover new habits and customs. I want to work in these countries to have a complete experience.</p>
+</div>
+<div class="note" id="running" style="display: none">
+  <h3>RUNNING</h3>
+  <p class="note">Running is the sport I have been doing since I was 20 years old.  
+Being in a very sporty engineering school I wanted to try a sport that is easy to do. 
+During my first race, after one kilometre, I was out of breath. At the age of 20, this was a turning point for me. How can I be young and unable to run? Since that day I have not stopped except for injuries. 
+I don't do it for competitive purposes. It simply allows me to breathe after a busy day and to surpass myself day after day, overcoming barriers. 
+It also makes me feel more revitalised and productive during the day.</p>
 </div>
 
 <script>
@@ -269,11 +303,13 @@ function func5()
 }
 function func6()
 {
-    document.getElementById("test3").className="aller testPosition";
+    document.getElementById("test3").className="aller";
 }
 function hobbiesTab(name) {
-    document.getElementById("London").style.display="none";
-    document.getElementById("Paris").style.display="none";
+    document.getElementById("photography").style.display="none";
+    document.getElementById("hiking").style.display="none";
+    document.getElementById("travel").style.display="none";
+    document.getElementById("running").style.display="none";
     document.getElementById(name).style.display="inline-block";
 }
 </script>
