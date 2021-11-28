@@ -104,7 +104,7 @@ body {
 /* Create four equal columns that floats next to each other */
 .column {
   float: left;
-  width: 25%;
+  width: 20%;
   padding: 10px;
 }
 
@@ -225,11 +225,15 @@ body {
     <button class="tablinks" onmouseover="hobbiesTab('running')" style="background-color:rgb(255, 135, 12); border:none" >
     <div id="test3" class="hide"><img src="running.png" alt="Agathe avatar" width="40%"></div>
   </div>
+  <div class="column">
+    <button class="tablinks" onmouseover="hobbiesTab('hulahoop')" style="background-color:rgb(255, 135, 12); border:none" >
+    <div id="test4" class="hide"><img src="hulahoop.png" alt="Agathe avatar" width="80%"></div>
+  </div>
 </div>
 
-<div id="photography" style="display: none">
-  <h3>London</h3>
-  <p>London is the capital city of England.</p>
+<div class="note" id="photography" style="display: none">
+  <h3>PHOTOGRAPHY</h3>
+  <p class="note">I started this passion in high school with a photography club. As I was also riding, I liked to photograph horses and riders during their sessions to learn how to take pictures with movement. Now I like to photograph landscapes.</p>
   <div><img src="map.png" alt="Agathe avatar" width="100%"></div>
 </div>
 <div class="note" id="hiking" style="display: none">
@@ -251,6 +255,10 @@ Being in a very sporty engineering school I wanted to try a sport that is easy t
 During my first race, after one kilometre, I was out of breath. At the age of 20, this was a turning point for me. How can I be young and unable to run? Since that day I have not stopped except for injuries. 
 I don't do it for competitive purposes. It simply allows me to breathe after a busy day and to surpass myself day after day, overcoming barriers. 
 It also makes me feel more revitalised and productive during the day.</p>
+</div>
+<div class="note" id="hulahoop" style="display: none">
+  <h3>HULAHOOP</h3>
+  <p class="note">After injuring my knees while running, I saw the hulahoop challenge on social media. The goal was simply to practice hulahooping for 30 minutes every day. It seemed like a good cardio alternative to running. I was not wrong! My abdominal, leg and arm muscles became stronger. My body became toned very quickly.</p>
 </div>
 
 <script>
@@ -280,6 +288,8 @@ window.onload=function()  //executes when the page finishes loading
     setTimeout(func4, 4000);
     setTimeout(func5, 6000);  //sets a timer which calls function func1 after 2,000 milliseconds = 2 secs.
     setTimeout(func6, 6000);  //sets a timer which calls function func1 after 2,000 milliseconds = 2 secs.
+    setTimeout(func7, 8000);  //sets a timer which calls function func1 after 2,000 milliseconds = 2 secs.
+    setTimeout(func8, 8000);  //sets a timer which calls function func1 after 2,000 milliseconds = 2 secs.
 };
 function func1()
 {
@@ -305,11 +315,20 @@ function func6()
 {
     document.getElementById("test3").className="aller";
 }
+function func7()
+{
+    document.getElementById("test4").className="show";
+}
+function func8()
+{
+    document.getElementById("test4").className="aller";
+}
 function hobbiesTab(name) {
     document.getElementById("photography").style.display="none";
     document.getElementById("hiking").style.display="none";
     document.getElementById("travel").style.display="none";
     document.getElementById("running").style.display="none";
+    document.getElementById("hulahoop").style.display="none";
     document.getElementById(name).style.display="inline-block";
 }
 </script>
