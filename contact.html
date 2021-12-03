@@ -87,6 +87,7 @@
   margin-top: -700px;
   padding-bottom: 30px;
   height: 600px;
+  display: inline-block;
 }
 .cardImage {
   position: relative;
@@ -98,13 +99,12 @@
 }
 .cardImageResize {
   position: relative;
-  background-color: #111;
-  margin-left:100px;
-  margin-right: 100px;
+  text-align: center;
 }
 @media screen and (max-width: 1000px){
   .sidenav {width: 0px;} 
-  .card {margin-top: -300px; margin-left: 100px; margin-right: 10px;}
+  .card {margin-top: -350px; margin-left: 100px; margin-right: 100px;}
+  .cardImageResize {margin-left: 100px; margin-right: 100px;}
   #btn {display: none;}
   #closebtn1 {display: none;}
   .cardImage {display: none;}
@@ -134,21 +134,20 @@
     <p id="imgTest"><img src="contactPhoto.png" alt="Agathe avatar" width="500px"></p>
   </div>
   <div class="cardImageResize" >
-    <p id="imgTest"><img src="contactPhoto.png" alt="Agathe avatar" width="100%"></p>
+    <p id="imgTest"><img src="contactPhoto.png" alt="Agathe avatar" width="80%" ></p>
   </div>
   <div class="card" >
     <div class="container">
-      <h4><b>GET IN TOUCH</b> <br></h4> 
-      <hr>
+      <h1><b>GET IN TOUCH</b></h1> 
       <hr color="black" width="500px" align="left">
       <div class="box">
-        <p class="note"><img src="house.jpg" alt="house"><p align="center"><span style="">Suttgart, Germany</span></p>
+        <p class="note"><img src="house.jpg" alt="house"><p align="center">Suttgart, Germany</p>
       </div>
       <div class="box">
-        <p class="note" ><img src="letter.jpg" alt="house"><p align="center"><span style="">dalmagathe@gmail.com</span></p>
+        <p class="note" ><img src="letter.jpg" alt="house"><p align="center">dalmagathe@gmail.com</p>
       </div>
       <div class="box">
-        <p class="note"><img src="phone.jpg" alt="house"><p align="center"><span style="">+33 (0)662981097</span></p>
+        <p class="note"><img src="phone.jpg" alt="house"><p align="center">+33 (0)662981097</p>
       </div>
     </div>
   </div>
