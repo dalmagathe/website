@@ -78,45 +78,57 @@
   text-align: none;
   position: absolute;
 }
+.cardBig {
+  position: relative;
+  padding-bottom: 30px;
+  height: 1000px;
+  width: 1100px;
+}
+
+.cardBigReisze {
+  position: relative;
+  padding-bottom: 30px;
+  height: 900px;
+  width: 600px;
+}
 .card {
   position: relative;
   box-shadow: 0 10px 8px 0 rgba(0,0,0,0.2);
   background-color: white;
-  margin-left: 900px;
-  margin-right: 300px;
   margin-top: -700px;
   padding-bottom: 30px;
   height: 600px;
-  display: inline-block;
+  width: 580px;
+  margin-left: 400px;
 }
 .cardImage {
   position: relative;
-  padding-right: 150px; 
-  padding-left: 150px; 
   padding-top: 100px;
-  margin-left: 300px;
-  margin-right: 1000px;
+  width: 300px;
+  align-items: center;
 }
 .cardImageResize {
   position: relative;
   text-align: center;
 }
+.resize{}
 @media screen and (max-width: 1000px){
   .sidenav {width: 0px;} 
-  .card {margin-top: -350px; margin-left: 100px; margin-right: 100px;}
-  .cardImageResize {margin-left: 100px; margin-right: 100px;}
+  .cardBigReisze{margin-right: auto; margin-left: auto;}
+  .card{margin-left: 10px; margin-top: -300px;}
   #btn {display: none;}
   #closebtn1 {display: none;}
   .cardImage {display: none;}
+  .cardBig{display: none;}
 }
 @media screen and (min-width: 999px){
   #btn2 {display: none;}
   #closebtn2 {display: none;}
-  .cardImageResize {display: none;}
+  .cardBig{margin-right: auto; margin-left: auto;}
+  .resize{display: none;}
 }
 
 </style>
-
 
 <div id="btn">
   <span style="font-size:30px; padding-left: 50px; color:white ; font-family:'Arial'; cursor:pointer" onclick="openNav()">&#9776; open</span>
@@ -130,31 +142,52 @@
 
 
 <div id="main2">
-  <div class="cardImage" >
-    <p id="imgTest"><img src="contactPhoto.png" alt="Agathe avatar" width="500px"></p>
-  </div>
-  <div class="cardImageResize" >
-    <p id="imgTest"><img src="contactPhoto.png" alt="Agathe avatar" width="80%" ></p>
-  </div>
-  <div class="card" >
-    <div class="container">
-      <h1><b>GET IN TOUCH</b></h1> 
-      <hr color="black" width="500px" align="left">
-      <div class="box">
-        <p class="note"><img src="house.jpg" alt="house"><p align="center">Suttgart, Germany</p>
+  <div class="resize">
+    <div class="cardBigReisze">
+      <div class="cardImageResize" >
+          <p id="imgTest"><img src="contactPhoto.png" alt="Agathe avatar" width="80%" ></p>
       </div>
-      <div class="box">
-        <p class="note" ><img src="letter.jpg" alt="house"><p align="center">dalmagathe@gmail.com</p>
+      <div class="card" >
+          <div class="container">
+            <h1><b>GET IN TOUCH</b></h1> 
+            <hr color="black" width="400px" align="left">
+            <div class="box">
+              <p class="note"><img src="house.jpg" alt="house"><p align="center">Suttgart, Germany</p>
+            </div>
+            <div class="box">
+              <p class="note" ><img src="letter.jpg" alt="house"><p align="center">dalmagathe@gmail.com</p>
+            </div>
+            <div class="box">
+              <p class="note"><img src="phone.jpg" alt="house"><p align="center">+33 (0)662981097</p>
+            </div>
+          </div>
       </div>
-      <div class="box">
-        <p class="note"><img src="phone.jpg" alt="house"><p align="center">+33 (0)662981097</p>
+    </div>
+  </div>
+  <div class="cardBig">
+    <div class="cardImage" >
+      <p id="imgTest"><img src="contactPhoto.png" alt="Agathe avatar" width="500px"></p>
+    </div>
+    <div class="card" >
+      <div class="container">
+        <h1><b>GET IN TOUCH</b></h1> 
+        <hr color="black" width="400px" align="left">
+        <div class="box">
+          <p class="note"><img src="house.jpg" alt="house"><p align="center">Suttgart, Germany</p>
+        </div>
+        <div class="box">
+          <p class="note" ><img src="letter.jpg" alt="house"><p align="center">dalmagathe@gmail.com</p>
+        </div>
+        <div class="box">
+          <p class="note"><img src="phone.jpg" alt="house"><p align="center">+33 (0)662981097</p>
+        </div>
       </div>
     </div>
   </div>
 </div>
 
 
-<div id="mySidenav" class="sidenav">
+<div id="mySidenav" class="sidenav" style="display: none">
   <a href="javascript:void(0)" class="closebtn" id="closebtn1" onclick="closeNav()">&times;</a>
   <a href="javascript:void(0)" class="closebtn" id="closebtn2" onclick="closeNav2()">&times;</a>
   <a href="testPage.html">
@@ -181,16 +214,18 @@
 
 <script>
   function openNav() {
+  document.getElementById("mySidenav").style.display = "block";
   document.getElementById("mySidenav").style.width = "200px";
-  document.getElementById("main2").style.marginLeft = "0px";
+  document.getElementById("main2").style.marginLeft = "200px";
 }
 
 function closeNav() {
   document.getElementById("mySidenav").style.width = "0";
-  document.getElementById("main2").style.marginLeft = "-200px";
+  document.getElementById("main2").style.marginLeft = "0px";
 }
 
   function openNav2() {
+  document.getElementById("mySidenav").style.display = "block";
   document.getElementById("mySidenav").style.width = "200px";
 }
 
