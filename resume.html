@@ -133,25 +133,6 @@ img {
 #closebtn2 {
 }
 
-body {
-  background-color:rgb(255, 135, 12);
-  margin-bottom: 100px;
-}
-
-@media screen and (max-width: 1000px){
-  .sidenav {width: 0px;}
-  .card {margin-left: 50px;}
-  .card2 {margin-left: 370px; margin-right: 50px;}
-  .card3 {margin-left: 370px; margin-right: 50px;}
-  .card4 {margin-left: 370px; margin-right: 50px;}  
-  #btn {display: none;}
-  #closebtn1 {display: none;}
-}
-@media screen and (min-width: 999px){
-  #btn2 {display: none;}
-  #closebtn2 {display: none;}
-}
-
 .rcorners1 {
   border-radius: 25px;
   background: #73AD21;
@@ -170,7 +151,37 @@ body {
   left:0px;
   text-align: center;
 }
-} 
+}
+
+#mySidenav {
+
+}
+
+#mySidenavResize {
+
+}
+
+body {
+  background-color:rgb(255, 135, 12);
+  margin-bottom: 100px;
+}
+
+@media screen and (max-width: 1000px){
+  .card {margin-left: 50px;}
+  .card2 {margin-left: 370px; margin-right: 50px;}
+  .card3 {margin-left: 370px; margin-right: 50px;}
+  .card4 {margin-left: 370px; margin-right: 50px;}
+  #btn {display: none;}
+  #mySidenav {width: 0px;}
+  #mySidenavResize {display: block;}
+  
+}
+@media screen and (min-width: 999px){
+  #btn2 {display: none;}
+  #mySidenavResize {width: 0px;}
+  #mySidenav {display: block;}
+}
+
 
 </style>
 
@@ -184,7 +195,30 @@ body {
 
 
 <div id="mySidenav" class="sidenav">
-  <a href="javascript:void(0)" class="closebtn" id="closebtn1" onclick="closeNav()">&times;</a>
+    <a href="javascript:void(0)" class="closebtn" id="closebtn1" onclick="closeNav()">&times;</a>
+    <a href="testPage.html">
+      <i class="fa fa-fw fa-home"></i>
+      <p>Home</p>
+    </a>
+    <a href="about.html">
+      <i class="fa fa-user"></i> 
+      <p>About</p>
+    </a>
+    <a href="resume.html">
+      <i class="fa fa-wrench"></i> 
+      <p>Resume</p>
+    </a>
+    <a href="hobbies.html">
+      <i class="  fa fa-puzzle-piece"></i> 
+      <p>Hobbies</p>
+    </a>
+    <a href="contact.html">
+      <i class="fa fa-address-book-o"></i> 
+      <p>Contact 1</p>
+    </a>
+</div>
+
+<div id="mySidenavResize" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" id="closebtn2" onclick="closeNav2()">&times;</a>
   <a href="testPage.html">
     <i class="fa fa-fw fa-home"></i>
@@ -404,21 +438,22 @@ body {
 
 <script>
   function openNav() {
-  document.getElementById("mySidenav").style.width = "200px";
+  document.getElementById("mySidenav").style.display = "block";
   document.getElementById("main2").style.marginLeft = "0px";
 }
 
 function closeNav() {
-  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("mySidenav").style.display = "none";
   document.getElementById("main2").style.marginLeft= "-200px";
 }
 
   function openNav2() {
-  document.getElementById("mySidenav").style.width = "200px";
+  document.getElementById("mySidenavResize").style.display = "block";
 }
 
 function closeNav2() {
-  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("mySidenavResize").style.display = "none";
+  document.getElementById("mySidenav").style.display = "none";
 }
 </script>
 
