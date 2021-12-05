@@ -112,23 +112,35 @@
   text-align: center;
 }
 .resize{}
+
+#mySidenav {
+
+}
+
+#mySidenavResize {
+
+}
+
 @media screen and (max-width: 1000px){
-  .sidenav {width: 0px;} 
-  .cardBigReisze{margin-right: auto; margin-left: auto;}
+  .cardBigReisze{margin-right: auto; margin-left: auto; background-color: white;}
   .card{margin-left: 10px; margin-top: -300px;}
-  #btn {display: none;}
-  #closebtn1 {display: none;}
   .cardImage {display: none;}
   .cardBig{display: none;}
+  #btn {display: none;}
+
+  #mySidenavResize {display: none;}
 }
 @media screen and (min-width: 999px){
-  #btn2 {display: none;}
-  #closebtn2 {display: none;}
   .cardBig{margin-right: auto; margin-left: auto;}
   .resize{display: none;}
+    #btn2 {display: none;}
+    #mySidenavResize {width: 0px;}
+    #mySidenav {display: block;}
 }
 
 </style>
+
+<body style="background-color:rgb(255, 135, 12);">
 
 <div id="btn">
   <span style="font-size:30px; padding-left: 50px; color:white ; font-family:'Arial'; cursor:pointer" onclick="openNav()">&#9776; open</span>
@@ -138,14 +150,11 @@
   <span style="font-size:30px; padding-left: 50px; color:white ; font-family:'Arial'; cursor:pointer" onclick="openNav2()">&#9776; open2</span>
 </div>
 
-<body style="background-color:rgb(255, 135, 12);">
-
-
 <div id="main2">
   <div class="resize">
     <div class="cardBigReisze">
       <div class="cardImageResize" >
-          <p id="imgTest"><img src="contactPhoto.png" alt="Agathe avatar" width="80%" ></p>
+          <p id="imgTest"><img src="contactPhoto.png" alt="Agathe avatar" width="500px" ></p>
       </div>
       <div class="card" >
           <div class="container">
@@ -186,9 +195,31 @@
   </div>
 </div>
 
+<div id="mySidenav" class="sidenav" style="display: none;">
+    <a href="javascript:void(0)" class="closebtn" id="closebtn1" onclick="closeNav()">&times;</a>
+    <a href="testPage.html">
+      <i class="fa fa-fw fa-home"></i>
+      <p>Home</p>
+    </a>
+    <a href="about.html">
+      <i class="fa fa-user"></i> 
+      <p>About</p>
+    </a>
+    <a href="resume.html">
+      <i class="fa fa-wrench"></i> 
+      <p>Resume</p>
+    </a>
+    <a href="hobbies.html">
+      <i class="  fa fa-puzzle-piece"></i> 
+      <p>Hobbies</p>
+    </a>
+    <a href="contact.html">
+      <i class="fa fa-address-book-o"></i> 
+      <p>Contact 1</p>
+    </a>
+</div>
 
-<div id="mySidenav" class="sidenav" style="display: none">
-  <a href="javascript:void(0)" class="closebtn" id="closebtn1" onclick="closeNav()">&times;</a>
+<div id="mySidenavResize" class="sidenav" style="display: none;">
   <a href="javascript:void(0)" class="closebtn" id="closebtn2" onclick="closeNav2()">&times;</a>
   <a href="testPage.html">
     <i class="fa fa-fw fa-home"></i>
@@ -215,22 +246,21 @@
 <script>
   function openNav() {
   document.getElementById("mySidenav").style.display = "block";
-  document.getElementById("mySidenav").style.width = "200px";
   document.getElementById("main2").style.marginLeft = "200px";
 }
 
 function closeNav() {
-  document.getElementById("mySidenav").style.width = "0";
-  document.getElementById("main2").style.marginLeft = "0px";
+  document.getElementById("mySidenav").style.display = "none";
+  document.getElementById("main2").style.marginLeft= "0px";
 }
 
   function openNav2() {
-  document.getElementById("mySidenav").style.display = "block";
-  document.getElementById("mySidenav").style.width = "200px";
+  document.getElementById("mySidenavResize").style.display = "block";
 }
 
 function closeNav2() {
-  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("mySidenavResize").style.display = "none";
+  document.getElementById("mySidenav").style.display = "none";
 }
 </script>
 
