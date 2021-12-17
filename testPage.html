@@ -41,10 +41,29 @@
   background-color: orange;
 }
 
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
+.card {
+  width: 900px;
+  padding-bottom: 30px;
+  background-color: black;
 }
+
+#main2 {
+  transition: margin-left .5s;
+  padding: 20px;
+}
+
+@media screen and (max-width: 1000px){
+  .card {margin-left: auto; margin-right: auto;}
+  #btn {display: none;}
+  #mySidenavResize {display: none;}
+}
+@media screen and (min-width: 999px){
+  .card {margin-left: auto; margin-right: auto;}
+  #btn2 {display: none;}
+  #mySidenavResize {width: 0px;}
+  #mySidenav {display: block;}
+}
+
 
 } 
 
@@ -52,37 +71,95 @@
 
 <body style="background-color:rgb(255, 135, 12);">
 
-<div class="note">
-  <h1>Welcome on my website !</h1>
-  <img src="avatar-removebg-preview.png" alt="Agathe avatar" style="width:500px">
-  <hr color="black" width="500px">
-  <h2>I'm Agathe DALMAZIR</h2>
-  <h2>Mechatronics and software engineer</h2>
+<div id="btn">
+  <span style="font-size:30px; padding-left: 50px; color:white ; font-family:'Arial'; cursor:pointer" onclick="openNav()">&#9776; open</span>
+</div>
+  <div id="btn2">
+  <span style="font-size:30px; padding-left: 50px; color:white ; font-family:'Arial'; cursor:pointer" onclick="openNav2()">&#9776; open2</span>
 </div>
 
-<div class="sidenav">
-	<a href="testPage.html">
-		<i class="fa fa-fw fa-home"></i>
-		<p>Home</p>
-	</a>
-	<a href="about.html">
-		<i class="fa fa-user"></i> 
-		<p>About</p>
-	</a>
-	<a href="resume.html">
-		<i class="fa fa-wrench"></i> 
-		<p>Resume</p>
-	</a>
-	<a href="hobbies.html">
-		<i class=" 	fa fa-puzzle-piece"></i> 
-		<p>Hobbies</p>
-	</a>
-	<a href="contact.html">
-		<i class="fa fa-address-book-o"></i> 
-		<p>Contact</p>
-	</a>
+<div id="main2">
+	<div class="card note">
+		<div class="card note">
+		  <h1>Welcome on my website !</h1>
+		  <img src="avatar-removebg-preview.png" alt="Agathe avatar" style="width:500px">
+		  <hr color="black" width="500px">
+		  <h2>I'm Agathe DALMAZIR</h2>
+		  <h2>Mechatronics and software engineer</h2>
+		</div>
+	</div>
 </div>
 
+  <div id="mySidenav" class="sidenav" style="display: none;">
+    <a href="javascript:void(0)" class="closebtn" id="closebtn1" onclick="closeNav()">&times;</a>
+    <a href="testPage.html">
+      <i class="fa fa-fw fa-home"></i>
+      <p>Home</p>
+    </a>
+    <a href="about.html">
+      <i class="fa fa-user"></i> 
+      <p>About</p>
+    </a>
+    <a href="resume.html">
+      <i class="fa fa-wrench"></i> 
+      <p>Resume</p>
+    </a>
+    <a href="hobbies.html">
+      <i class="  fa fa-puzzle-piece"></i> 
+      <p>Hobbies</p>
+    </a>
+    <a href="contact.html">
+      <i class="fa fa-address-book-o"></i> 
+      <p>Contact</p>
+    </a>
+  </div>
+</div>
+
+  <div id="mySidenavResize" class="sidenav" style="display: none;">
+    <a href="javascript:void(0)" class="closebtn" id="closebtn2" onclick="closeNav2()">&times;</a>
+    <a href="testPage.html">
+      <i class="fa fa-fw fa-home"></i>
+      <p>Home</p>
+    </a>
+    <a href="about.html">
+      <i class="fa fa-user"></i> 
+      <p>About</p>
+    </a>
+    <a href="resume.html">
+      <i class="fa fa-wrench"></i> 
+      <p>Resume</p>
+    </a>
+    <a href="hobbies.html">
+      <i class="  fa fa-puzzle-piece"></i> 
+      <p>Hobbies</p>
+    </a>
+    <a href="contact.html">
+      <i class="fa fa-address-book-o"></i> 
+      <p>Contact2</p>
+    </a>
+  </div>
+</div>
+
+<script>
+  function openNav() {
+  document.getElementById("mySidenav").style.display = "block";
+  document.getElementById("main2").style.marginLeft = "200px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.display = "none";
+  document.getElementById("main2").style.marginLeft= "0px";
+}
+
+  function openNav2() {
+  document.getElementById("mySidenavResize").style.display = "block";
+}
+
+function closeNav2() {
+  document.getElementById("mySidenavResize").style.display = "none";
+  document.getElementById("mySidenav").style.display = "none";
+}
+</script>
 
 
 
