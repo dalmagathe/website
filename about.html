@@ -53,46 +53,13 @@
 }
 
 .card {
-  box-shadow: 0 10px 8px 0 rgba(0,0,0,0.2);
-  width: 300px;
-  background-color: white;
-  margin-left: 400px;
+  width: 900px;
   padding-bottom: 30px;
-
-}
-.card2 {
-  position: relative;
-  box-shadow: 0 10px 8px 0 rgba(0,0,0,0.2);
-  background-color: white;
-  margin-left: 730px;
-  margin-right: 200px;
-  margin-top: -1771px;
 }
 
-.card3 {
-  position: relative;
-  box-shadow: 0 10px 8px 0 rgba(0,0,0,0.2);
-  background-color: white;
-  margin-left: 730px;
-  margin-right: 200px;
-  margin-top: 30px;
-}
-
-.card4 {
-  position: relative;
-  box-shadow: 0 10px 8px 0 rgba(0,0,0,0.2);
-  background-color: white;
-  margin-left: 730px;
-  margin-right: 200px;
-  margin-top: 30px;
-}
-.cardBottom{
-  position: relative;
-  box-shadow: 0 10px 8px 0 rgba(0,0,0,0.2);
-  background-color: white;
-  margin-left: 730px;
-  margin-right: 200px;
-  margin-top: 30px;
+.cardResize {
+  width: 80%;
+  padding-bottom: 30px;
 }
 
 .container {
@@ -101,28 +68,15 @@
   font-size: 100%;
 }
 
-.containerBottom {
-  position: relative;
-  padding: 70px 50px;
-  background-color: white;
-  bottom: -120px;
-  margin-right: -28px;
-  margin-left: -28px;
-}
-
 img {
   vertical-align: middle;
 }
 
-
-#main {
-  transition: margin-left .5s;
-  padding: 16px;
-}
 #main2 {
   transition: margin-left .5s;
   padding: 20px;
 }
+
 #btn {
 }
 
@@ -132,6 +86,12 @@ img {
 }
 #closebtn2 {
 }
+#mySidenav {
+}
+#Resize {
+}
+#NoResize {
+}
 
 body {
   background-color:rgb(255, 135, 12);
@@ -139,100 +99,116 @@ body {
 }
 
 @media screen and (max-width: 1000px){
-  .sidenav {width: 0px;}
-  .card {margin-left: 50px;}
-  .card2 {margin-left: 370px; margin-right: 50px;}
-  .card3 {margin-left: 370px; margin-right: 50px;}
-  .card4 {margin-left: 370px; margin-right: 50px;}  
+  .cardResize {margin-left: auto; margin-right: auto;}
   #btn {display: none;}
-  #closebtn1 {display: none;}
+  #mySidenavResize {display: none;}
+  #NoResize{display: none;}
 }
 @media screen and (min-width: 999px){
+  .card {margin-left: auto; margin-right: auto;}
   #btn2 {display: none;}
-  #closebtn2 {display: none;}
+  #mySidenavResize {width: 0px;}
+  #mySidenav {display: block;}
+  #Resize{display: none;}
 }
 
-.rcorners1 {
-  border-radius: 25px;
-  background: #73AD21;
-  width: 200px;
-  height: 20px;
-  position: relative;
-}
-
-.rcorners2 {
-  border-radius: 25px;
-  background: green;
-  width: 100px;
-  height: 20px;
-  position: absolute;
-  top: 0px;
-  left:0px;
-  text-align: center;
-}
-} 
 
 </style>
 
-<div id="btn">
-  <span style="font-size:30px; padding-left: 50px; color:white ; font-family:'Arial'; cursor:pointer" onclick="openNav()">&#9776; open</span>
+  <div id="btn">
+    <span style="font-size:30px; padding-left: 50px; color:white ; font-family:'Arial'; cursor:pointer" onclick="openNav()">&#9776; open</span>
+  </div>
+    <div id="btn2">
+    <span style="font-size:30px; padding-left: 50px; color:white ; font-family:'Arial'; cursor:pointer" onclick="openNav2()">&#9776; open2</span>
+  </div>
+
+
+  <div id="mySidenav" class="sidenav" style="display: none;">
+    <a href="javascript:void(0)" class="closebtn" id="closebtn1" onclick="closeNav()">&times;</a>
+    <a href="testPage.html">
+      <i class="fa fa-fw fa-home"></i>
+      <p>Home</p>
+    </a>
+    <a href="about.html">
+      <i class="fa fa-user"></i> 
+      <p>About</p>
+    </a>
+    <a href="resume.html">
+      <i class="fa fa-wrench"></i> 
+      <p>Resume</p>
+    </a>
+    <a href="hobbies.html">
+      <i class="  fa fa-puzzle-piece"></i> 
+      <p>Hobbies</p>
+    </a>
+    <a href="contact.html">
+      <i class="fa fa-address-book-o"></i> 
+      <p>Contact</p>
+    </a>
+  </div>
 </div>
 
-<div id="btn2">
-  <span style="font-size:30px; padding-left: 50px; color:white ; font-family:'Arial'; cursor:pointer" onclick="openNav2()">&#9776; open2</span>
+  <div id="mySidenavResize" class="sidenav" style="display: none;">
+    <a href="javascript:void(0)" class="closebtn" id="closebtn2" onclick="closeNav2()">&times;</a>
+    <a href="testPage.html">
+      <i class="fa fa-fw fa-home"></i>
+      <p>Home</p>
+    </a>
+    <a href="about.html">
+      <i class="fa fa-user"></i> 
+      <p>About</p>
+    </a>
+    <a href="resume.html">
+      <i class="fa fa-wrench"></i> 
+      <p>Resume</p>
+    </a>
+    <a href="hobbies.html">
+      <i class="  fa fa-puzzle-piece"></i> 
+      <p>Hobbies</p>
+    </a>
+    <a href="contact.html">
+      <i class="fa fa-address-book-o"></i> 
+      <p>Contact2</p>
+    </a>
+  </div>
 </div>
 
-
-<div id="mySidenav" class="sidenav">
-  <a href="javascript:void(0)" class="closebtn" id="closebtn1" onclick="closeNav()">&times;</a>
-  <a href="javascript:void(0)" class="closebtn" id="closebtn2" onclick="closeNav2()">&times;</a>
-  <a href="testPage.html">
-    <i class="fa fa-fw fa-home"></i>
-    <p>Home</p>
-  </a>
-  <a href="about.html">
-    <i class="fa fa-user"></i> 
-    <p>About</p>
-  </a>
-  <a href="resume.html">
-    <i class="fa fa-wrench"></i> 
-    <p>Resume</p>
-  </a>
-  <a href="hobbies.html">
-    <i class="  fa fa-puzzle-piece"></i> 
-    <p>Hobbies</p>
-  </a>
-  <a href="contact.html">
-    <i class="fa fa-address-book-o"></i> 
-    <p>Contact</p>
-  </a>
+<div id="Resize">
+  <div id="main2">
+    <div class="cardResize note">
+      <h1> Who is Agathe ?</h1>
+      <img src="about3.png" alt="Agathe avatar" style="width:100%">
+    </div>
+  </div>
 </div>
 
-<div class="note">
-  <h1> Who is Agathe ?</h1>
-  <img src="about.png" alt="Agathe avatar" style="width:500px">
-</div>
-
-<div class="containerBottom">
+<div id="NoResize">
+  <div id="main2">
+    <div class="card note">
+      <h1> Who is Agathe ?</h1>
+      <img src="about3.png" alt="Agathe avatar" style="width:1000px">
+    </div>
+  </div>
 </div>
 
 <script>
   function openNav() {
-  document.getElementById("mySidenav").style.width = "200px";
-  document.getElementById("main2").style.marginLeft = "0px";
+  document.getElementById("mySidenav").style.display = "block";
+  document.getElementById("NoResize").style.marginLeft = "200px";
 }
 
 function closeNav() {
-  document.getElementById("mySidenav").style.width = "0";
-  document.getElementById("main2").style.marginLeft= "-200px";
+  document.getElementById("mySidenav").style.display = "none";
+  document.getElementById("NoResize").style.marginLeft= "0px";
 }
 
   function openNav2() {
-  document.getElementById("mySidenav").style.width = "200px";
+  document.getElementById("mySidenavResize").style.display = "block";
 }
 
 function closeNav2() {
-  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("mySidenavResize").style.display = "none";
+  document.getElementById("mySidenav").style.display = "none";
 }
 </script>
 

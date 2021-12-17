@@ -34,6 +34,7 @@
   display: block;
   text-align: center;
   transition: 0.3s;
+  size: 1000px;
 }
 
 .sidenav a:hover {
@@ -55,8 +56,10 @@
 #btn2 {
 }
 #closebtn1 {
+  background-color: black;
 }
 #closebtn2 {
+  background-color: black;
 }
 
 .box {
@@ -111,23 +114,21 @@
   position: relative;
   text-align: center;
 }
-.resize{}
+.resize{
+}
 
 #mySidenav {
-
 }
 
 #mySidenavResize {
-
 }
 
 @media screen and (max-width: 1000px){
-  .cardBigReisze{margin-right: auto; margin-left: auto; background-color: white;}
-  .card{margin-left: 10px; margin-top: -300px;}
+  .cardBigReisze{margin-right: auto; margin-left: auto;}
+  .card{margin-left: 10px; margin-top: -320px;}
   .cardImage {display: none;}
   .cardBig{display: none;}
   #btn {display: none;}
-
   #mySidenavResize {display: none;}
 }
 @media screen and (min-width: 999px){
@@ -143,11 +144,11 @@
 <body style="background-color:rgb(255, 135, 12);">
 
 <div id="btn">
-  <span style="font-size:30px; padding-left: 50px; color:white ; font-family:'Arial'; cursor:pointer" onclick="openNav()">&#9776; open</span>
+  <span style="font-size:30px; padding-left: 50px; color:white ; font-family:'Arial'; cursor:pointer" onclick="openNav()">&#9776; Menu</span>
 </div>
 
 <div id="btn2">
-  <span style="font-size:30px; padding-left: 50px; color:white ; font-family:'Arial'; cursor:pointer" onclick="openNav2()">&#9776; open2</span>
+  <span style="font-size:30px; padding-left: 50px; color:white ; font-family:'Arial'; cursor:pointer" onclick="openNav2()">&#9776; Menu</span>
 </div>
 
 <div id="main2">
@@ -156,10 +157,10 @@
       <div class="cardImageResize" >
           <p id="imgTest"><img src="contactPhoto.png" alt="Agathe avatar" width="500px" ></p>
       </div>
-      <div class="card" >
+      <div class="card">
           <div class="container">
             <h1><b>GET IN TOUCH</b></h1> 
-            <hr color="black" width="400px" align="left">
+            <hr color="orange" width="500px" align="left" size="10px">
             <div class="box">
               <p class="note"><img src="house.jpg" alt="house"><p align="center">Suttgart, Germany</p>
             </div>
@@ -179,8 +180,9 @@
     </div>
     <div class="card" >
       <div class="container">
+        <br>
         <h1><b>GET IN TOUCH</b></h1> 
-        <hr color="black" width="400px" align="left">
+        <hr color="orange" width="500px" align="left" size="10px">
         <div class="box">
           <p class="note"><img src="house.jpg" alt="house"><p align="center">Suttgart, Germany</p>
         </div>
@@ -215,7 +217,7 @@
     </a>
     <a href="contact.html">
       <i class="fa fa-address-book-o"></i> 
-      <p>Contact 1</p>
+      <p>Contact</p>
     </a>
 </div>
 
