@@ -50,8 +50,3 @@
 .sidenav .closebtn:hover {
   background-color: black;
 }
-
-/* Allow a smooth transition when a sideber is open */
-#pageContent {
-  transition: margin-left .5s;
-}
