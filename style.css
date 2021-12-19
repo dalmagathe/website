@@ -1,0 +1,57 @@
+.note {
+	font-family:'Arial';
+	font-size: 100%;
+	color: white;
+	text-align: center;
+}
+
+/* Sidebar */
+.sidenav {
+ 	height: 100%;
+  	width: 200px;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	background-color: #111;
+	overflow-x: hidden;
+	padding-top: 80px;
+}
+
+/* Menu links in the sidebr */
+.sidenav a {
+	font-family:'Arial';
+	height: 100px;
+  	padding: 20px 6px 6px 0px; /* T R B L */
+	text-decoration: none;
+	font-size: 25px;
+	color: #818181;
+	display: block;
+	text-align: center;
+}
+
+/* Mouse hover on sidebar */
+.sidenav a:hover {
+  color: white;             /* On text */
+  background-color: orange;   /* On text background */
+}
+
+/* close button design */
+.sidenav .closebtn {
+  position: absolute;
+  height : 20px;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* close button hover design */
+.sidenav .closebtn:hover {
+  background-color: black;
+}
+
+/* Allow a smooth transition when a sideber is open */
+#pageContent {
+  transition: margin-left .5s;
+}
