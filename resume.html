@@ -1,164 +1,64 @@
 
 <!DOCTYPE html>
 <html>
-<head>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<title>Agathe DALMAZIR</title>
+  <!-- Link for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Link for style -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <style>
-.note {
-  font-family:'Arial';
-  font-size: 100%;
-  color: white;
-  text-align: center;
-  margin-left: 200px;
+
+.wrapperAll {
+  display: grid;
+  grid-template-columns: 1fr;
 }
 
-.sidenav {
-  height: 100%;
-  width: 200px;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: #111;
-  overflow-x: hidden;
-  padding-top: 80px;
-  transition: 0.5s;
-
+.wrapperCard {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
 }
 
-.sidenav a {
-  font-family:'Arial';
-  padding: 6px 6px 6px 0px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #818181;
-  display: block;
-  text-align: center;
-  transition: 0.3s;
-}
-
-.sidenav a:hover {
-  color: #f1f1f1;
-  background-color: orange;
-}
-
-.sidenav .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
-}
-
-.card {
-  box-shadow: 0 10px 8px 0 rgba(0,0,0,0.2);
+#skillsInfos {
   width: 300px;
+  height: 1800px;
+  box-shadow: 0 10px 8px 0 rgba(0,0,0,0.2); /* offset-x | offset-y | blur-radius | spread-radius | color */
   background-color: white;
-  margin-left: 400px;
-  padding-bottom: 30px;
-
-}
-.card2 {
-  position: relative;
-  box-shadow: 0 10px 8px 0 rgba(0,0,0,0.2);
-  background-color: white;
-  margin-left: 730px;
-  margin-right: 200px;
-  margin-top: -1771px;
+  grid-row-start: 1;
+  grid-row-end: 4;
 }
 
-.card3 {
-  position: relative;
-  box-shadow: 0 10px 8px 0 rgba(0,0,0,0.2);
+.professionalExp {
+  box-shadow: 0 10px 8px 0 rgba(0,0,0,0.2); /* offset-x | offset-y | blur-radius | spread-radius | color */
   background-color: white;
-  margin-left: 730px;
-  margin-right: 200px;
-  margin-top: 30px;
+  grid-row-start: 1;
+  grid-row-end: 1;
 }
 
-.card4 {
-  position: relative;
-  box-shadow: 0 10px 8px 0 rgba(0,0,0,0.2);
+.projects {
+  box-shadow: 0 10px 8px 0 rgba(0,0,0,0.2); /* offset-x | offset-y | blur-radius | spread-radius | color */
   background-color: white;
-  margin-left: 730px;
-  margin-right: 200px;
-  margin-top: 30px;
-}
-.cardBottom{
-  position: relative;
-  box-shadow: 0 10px 8px 0 rgba(0,0,0,0.2);
-  background-color: white;
-  margin-left: 730px;
-  margin-right: 200px;
-  margin-top: 30px;
+  grid-row-start: 2;
+  grid-row-end: 2;
 }
 
-.container {
-  padding: 2px 16px;
+.education {
+  box-shadow: 0 10px 8px 0 rgba(0,0,0,0.2); /* offset-x | offset-y | blur-radius | spread-radius | color */
+  background-color: white;
+  grid-row-start: 3;
+  grid-row-end: 3;
+}
+
+.textCard {
+  padding: 2px 16px; /* TB RL */
   font-family:'Arial';
   font-size: 100%;
 }
 
-.containerBottom {
-  position: relative;
-  padding: 70px 50px;
-  background-color: white;
-  bottom: -120px;
-  margin-right: -28px;
-  margin-left: -28px;
-}
-
-img {
-  vertical-align: middle;
-}
-
-
-#main {
-  transition: margin-left .5s;
-  padding: 16px;
-}
-#main2 {
+#mouvement {
   transition: margin-left .5s;
   padding: 20px;
-}
-#btn {
-}
-
-#btn2 {
-}
-#closebtn1 {
-}
-#closebtn2 {
-}
-
-.rcorners1 {
-  border-radius: 25px;
-  background: #73AD21;
-  width: 200px;
-  height: 20px;
-  position: relative;
-}
-
-.rcorners2 {
-  border-radius: 25px;
-  background: green;
-  width: 100px;
-  height: 20px;
-  position: absolute;
-  top: 0px;
-  left:0px;
-  text-align: center;
-}
-}
-
-#mySidenav {
-
-}
-
-#mySidenavResize {
-
 }
 
 body {
@@ -166,296 +66,303 @@ body {
   margin-bottom: 100px;
 }
 
-@media screen and (max-width: 1000px){
-  .card {margin-left: 50px;}
-  .card2 {margin-left: 370px; margin-right: 50px;}
-  .card3 {margin-left: 370px; margin-right: 50px;}
-  .card4 {margin-left: 370px; margin-right: 50px;}
-  #btn {display: none;}
+@media screen and (max-width: 1500px){
+  #openBtnNoResize {display: none;}
   #mySidenav {width: 0px;}
   #mySidenavResize {display: block;}
+  .wrapperCard {margin-right: 10px; margin-left: 10px; grid-template-columns: 300px 1fr;}
   
 }
-@media screen and (min-width: 999px){
-  #btn2 {display: none;}
+@media screen and (min-width: 1499px){
+  #openBtnResize {display: none;}
   #mySidenavResize {width: 0px;}
   #mySidenav {display: block;}
+  .wrapperCard {margin-right: auto; margin-left: auto; grid-template-columns: 300px 1000px;}
 }
 
 
 </style>
 
-<div id="btn">
-  <span style="font-size:30px; padding-left: 50px; color:white ; font-family:'Arial'; cursor:pointer" onclick="openNav()">&#9776; open</span>
-</div>
+  <div id="openBtnNoResize">
+    <span style="font-size:30px; padding-left: 50px; color:white ; font-family:'Arial'; cursor:pointer" onclick="openNavNoResize()">&#9776; Menu</span>
+  </div>
 
-<div id="btn2">
-  <span style="font-size:30px; padding-left: 50px; color:white ; font-family:'Arial'; cursor:pointer" onclick="openNav2()">&#9776; open2</span>
-</div>
+  <div id="openBtnResize">
+    <span style="font-size:30px; padding-left: 50px; color:white ; font-family:'Arial'; cursor:pointer" onclick="openNavResize()">&#9776; Menu</span>
+  </div>
 
+  <div id="sideBarNoResize" class="sidenav" style="display: none;">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNavNoResize()">&times;</a>
+      <a href="index.html">
+        <i class="fa fa-fw fa-home"></i>
+        <p>Home</p>
+      </a>
+      <a href="about.html">
+        <i class="fa fa-user"></i> 
+        <p>About</p>
+      </a>
+      <a href="resume.html">
+        <i class="fa fa-wrench"></i> 
+        <p>Resume</p>
+      </a>
+      <a href="hobbies.html">
+        <i class="  fa fa-puzzle-piece"></i> 
+        <p>Hobbies</p>
+      </a>
+      <a href="contact.html">
+        <i class="fa fa-address-book-o"></i> 
+        <p>Contact</p>
+      </a>
+  </div>
 
-<div id="mySidenav" class="sidenav" style="display: none;">
-    <a href="javascript:void(0)" class="closebtn" id="closebtn1" onclick="closeNav()">&times;</a>
-    <a href="index.html">
-      <i class="fa fa-fw fa-home"></i>
-      <p>Home</p>
-    </a>
-    <a href="about.html">
-      <i class="fa fa-user"></i> 
-      <p>About</p>
-    </a>
-    <a href="resume.html">
-      <i class="fa fa-wrench"></i> 
-      <p>Resume</p>
-    </a>
-    <a href="hobbies.html">
-      <i class="  fa fa-puzzle-piece"></i> 
-      <p>Hobbies</p>
-    </a>
-    <a href="contact.html">
-      <i class="fa fa-address-book-o"></i> 
-      <p>Contact</p>
-    </a>
-</div>
+  <div id="mySidenavResize" class="sidenav" style="display: none;">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNavResize()">&times;</a>
+      <a href="index.html">
+        <i class="fa fa-fw fa-home"></i>
+        <p>Home</p>
+      </a>
+      <a href="about.html">
+        <i class="fa fa-user"></i> 
+        <p>About</p>
+      </a>
+      <a href="resume.html">
+        <i class="fa fa-wrench"></i> 
+        <p>Resume</p>
+      </a>
+      <a href="hobbies.html">
+        <i class="  fa fa-puzzle-piece"></i> 
+        <p>Hobbies</p>
+      </a>
+      <a href="contact.html">
+        <i class="fa fa-address-book-o"></i> 
+        <p>Contact</p>
+      </a>
+  </div>
 
-<div id="mySidenavResize" class="sidenav" style="display: none;">
-  <a href="javascript:void(0)" class="closebtn" id="closebtn2" onclick="closeNav2()">&times;</a>
-  <a href="index.html">
-    <i class="fa fa-fw fa-home"></i>
-    <p>Home</p>
-  </a>
-  <a href="about.html">
-    <i class="fa fa-user"></i> 
-    <p>About</p>
-  </a>
-  <a href="resume.html">
-    <i class="fa fa-wrench"></i> 
-    <p>Resume</p>
-  </a>
-  <a href="hobbies.html">
-    <i class="  fa fa-puzzle-piece"></i> 
-    <p>Hobbies</p>
-  </a>
-  <a href="contact.html">
-    <i class="fa fa-address-book-o"></i> 
-    <p>Contact</p>
-  </a>
-</div>
+<div id="mouvement">
 
-<div id="main2">
-  <div class="card" >
-    <img src="moi2.jpg" alt="Agathe avatar" style="width:300px">
-    <div class="container">
-      <h4><b>Agathe DALMAZIR</b></h4> 
-      <p>Mechatronics and software engineer</p>
-      <hr>
-        <p><i class="fa fa-home fa-fw"></i>Stuttgart, Germany</p>
-        <p><i class="fa fa-envelope fa-fw"></i>dalmagathe@gmail.com</p>
-        <p><i class="fa fa-phone fa-fw"></i>+33 (0)662981097</p>
-      <hr>
-      <p><i class="fa fa-globe fa-fw"></i>Languages</b></p>
-      <p><img src="english.jpg" alt="" style="width:20%">   Intermediate</p>
-      <p><img src="french.jpg" alt="" style="width:20%">   Mother tongue</p>
-      <p><img src="german.jpg" alt="" style="width:20%">   Beginner</p>
-      <hr>
-      <p><b><i class="fa fa-asterisk fa-fw w3-xxlarge"></i>Skills</b></p>
-      <p align="center"><img src="software.png" alt="" style="width:90%"></p>
-      <hr>
-      <p class="w3-large"><b><i class="fa fa-cogs"></i>    Methods</b></p>
-      <p align="center"><img src="methods.png" alt="" style="width:95%"></p>
-      <hr>
-      <p class="w3-large"><b><i class="fa fa-at"></i>    Programmation</b></p>
-      <p align="center"><img src="programmation.png" alt="" style="width:90%"></p>
-      <hr>
-      <p align="center"><img src="github.png" alt="" style="width:40%"></p>
-      <a href="https://github.com/dalmagathe">https://github.com/dalmagathe</a>
+  <div class="wrapperAll">
+
+    <div class="wrapperCard">
+
+      <div id="skillsInfos" >
+        <img src="docs/assets/img/resumeAgathe.jpg" alt="Agathe avatar" style="width:300px">
+        <div class="textCard">
+          <h4><b>Agathe DALMAZIR</b></h4> 
+          <p>Mechatronics and software engineer</p>
+          <hr>
+            <p><i class="fa fa-home fa-fw"></i>Stuttgart, Germany</p>
+            <p><i class="fa fa-envelope fa-fw"></i>dalmagathe@gmail.com</p>
+            <p><i class="fa fa-phone fa-fw"></i>+33 (0)662981097</p>
+          <hr>
+          <p><i class="fa fa-globe fa-fw"></i>Languages</b></p>
+          <p><img src="english.jpg" alt="" style="width:20%">   Intermediate</p>
+          <p><img src="french.jpg" alt="" style="width:20%">   Mother tongue</p>
+          <p><img src="german.jpg" alt="" style="width:20%">   Beginner</p>
+          <hr>
+          <p><b><i class="fa fa-asterisk fa-fw w3-xxlarge"></i>Skills</b></p>
+          <p align="center"><img src="software.png" alt="" style="width:90%"></p>
+          <hr>
+          <p class="w3-large"><b><i class="fa fa-cogs"></i>    Methods</b></p>
+          <p align="center"><img src="methods.png" alt="" style="width:95%"></p>
+          <hr>
+          <p class="w3-large"><b><i class="fa fa-at"></i>    Programmation</b></p>
+          <p align="center"><img src="programmation.png" alt="" style="width:90%"></p>
+          <hr>
+          <p align="center"><img src="github.png" alt="" style="width:40%"></p>
+          <a href="https://github.com/dalmagathe">https://github.com/dalmagathe</a>
+        </div>
+      </div>
+
+      <div class="professionalExp" >
+        <div class="container">
+          <p>"After 3 years of apprenticeship in a mechanical, hydraulic and electrical field I 
+          discovered more deeply during my VIE the software and programming part. Now 
+          I’m looking for a position in an international environment to improve my technical 
+          skills in programming. 
+          If you are looking for someone who wants to learn and not rest on his laurels, 
+          please contact me !"</p>
+          <h4><b>Professional experiences</b></h4> 
+          <hr>
+          <table style="width:100%">
+            <tr>
+            <td style="color: blue"> Mechatronics / Software engineer (VIE) </td>
+            <td style="color: blue" align="right">Nov 2020 - Present</td>
+            </tr>
+            <tr>
+              <td colspan="2">Technology and Strategy, Stuttgart, Germany</td>
+            </tr>
+            <tr>
+            <td align="center"> <br> Mechatronics <br> On autonomous mobile robots </td>
+            <td align="left">
+            ▪ Sizing motorisation,<br>
+            ▪ Creation of a CAD model (Solidworks),<br>
+            ▪ Creation of mechanical parts with 3D printer for an active steering.<br></td>
+            </tr>
+            <tr>
+            <td align="center"> <br> Software <br> On an AI labelling software</td>
+            <td align="left">
+              <br>
+            ▪ Implementing new graphics features for the user (Python),<br>
+            ▪ Improvement of the UI/UX (Qt),<br>
+            ▪ Development of a software tool to facilitate the data labelling process
+            (Python),<br>
+            ▪ DevOps : Ensure cross-platform use of the software,<br>
+            ▪ Redaction of the research tax credit paper.<br></td>
+            </tr>
+
+            <tr>
+            <td style="color: blue"> Methods, maintenance, and new works unit (apprenticeship) </td>
+            <td style="color: blue" align="right">Sept 2017 – Sept 2020</td>
+            </tr>
+            <tr>
+              <td colspan="2">Foure Lagadec (nuclear field), France</td>
+            </tr>
+            <tr>
+            <td align="center"> <br> Methods unit <br></td>
+            <td align="left">
+            ▪ Research of the cause of breakdowns thanks to the maintenance data,
+            drawings, wiring diagrams, hydraulic schematics, functional analyzes,
+            etc ...<br>
+            ▪ Propose improvements on the production devices to avoid breakdowns,<br>
+            ▪ Writing feedbacks regarding the problems encountered during
+            maintenance operations from a technical, safety, security and working
+            conditions point of view,<br>
+            ▪ Writing health care systems in order to detect ageing, obsolescence and
+            early signs of equipment malfunction and to programme maintenance,
+            renovation and replacement actions accordingly.<br></td>
+            </tr>
+            <tr>
+            <td align="center"> <br> New works unit <br></td>
+            <td align="left">
+              <br>
+            ▪ Drafting commercial and technical offers in response to calls for tenders
+            on multidisciplinary projects (mechanics, electrical, hydraulics, and
+            programmable industrial controllers),<br>
+            ▪ Research of the feasibility and the necessary technologies on projects
+            (multidisciplinary sizing),<br>
+            ▪ Sizing mechanical parts, motorization group, hydraulic cylinders,
+            hydraulic systems,<br>
+            ▪ Creation of electrical control boxes,<br>
+            ▪ Modification of a PLC program: Ladder language,<br>
+            ▪ Creation of mechanical drawings (2D, 3D), wiring diagrams and
+            hydraulic schematics,<br>
+            ▪ Contact with suppliers for the adaptation and purchase of equipment,<br>
+            ▪ Management and installation of projects on site with technicians and
+            project manager.<br></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+      <div class="projects" >
+        <div class="container">
+          <table style="width:100%">
+            <td colspan="2"><h4><b>Professional experiences</b></h4> <hr></td>
+            <tr>
+            <td style="color: blue"> Vokabellernen </td>
+            <td style="color: blue" align="right">On going</td>
+            </tr>
+            <tr>
+              <td colspan="2">Application with Qt and C++ connected to a PhpMyAdmin database to record and translate words in English/French/German.
+              The application randomly chooses a word in English/French or German, the user translates it and thus learns it. You can also
+              choose to guess the article (das/der/die) or the plural form of a noun</td>
+            </tr>
+            <td colspan="2"><h4><b>Engineering school projects</b></h4> <hr></td>
+            <tr>
+            <td colspan="2" style="color: blue"> Design of a mobile robot prototype for the investigation of nuclear areas </td>
+            </tr>
+            <tr>
+              <td colspan="2">Project for the CEA (French Alternative Energies and Atomic Energy Commission). The innovation on this robot was to be able 
+              to change the size of the mobile base during use. To do this, we integrated an electrical cylinder on the base. There are also 
+              two caterpillars, one on the left and one on the right, and “flippers” at the front for climbing stairs.</td>
+            </tr>
+            <tr>
+              <td align="left">
+              <br>
+              ▪ Systems engineering (Core software):
+              System definition: Needs, requirements, stakeholders, life cycle, functional and organic architectures,
+              Validation and verification of the system definition,
+              Testing and validation of sensors and actuators programs.<br>
+              ▪ Machining of mechanical parts (CNC turning lathe, tapping, drilling, etc),<br>
+              ▪ Creation of a control loop for the position of the cylinder rod according to the angle values returned by the
+              gyroscopic/accelerometer sensor installed on a front flipper. This allowed me to stretch the robot’s caterpillars during use
+              even if the flippers change their angular position (Programming with C language, Nvidia Jetson Nano).
+              <br></td>
+            </tr>
+            <tr>
+            <td colspan="2" style="color: blue"> Technical projects</td>
+            </tr>
+            <tr>
+              <td colspan="2">Programming a mobile robot with LabVIEW. We were moving the robot thanks to a joystick for an obstacle race.<br>
+              Programming a FPGA on a mobile robot with VHDL. There were 2 different modes: to follow a line and to combat like a Sumo.</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+      <div class="education" >
+        <div class="container">
+          <table style="width:100%">
+            <td colspan="2"><h4><b>Education</b></h4> <hr></td>
+            <tr>
+            <td style="color: blue"> OpenClassrooms certificate: C ++ training</td>
+            <td style="color: blue" align="right">2021</td>
+            </tr>
+            <tr>
+            <td style="color: blue"> Engineering diploma: Ecole des mines d’Alès, France </td>
+            <td style="color: blue" align="right">2017 - 2020</td>
+            </tr>
+            <tr>
+              <td colspan="2">Mechatronics Systems department. Training in apprenticeship.</td>
+            </tr>
+            <tr>
+            <td style="color: blue">Preparatory classes before engineering school: Jean Baptiste Dumas Highschool, France </td>
+            <td style="color: blue" align="right">2015 – 2017</td>
+            </tr>
+            <tr>
+              <td colspan="2">Technology and Industrial sciences training to prepare competitive exams to access an engineering school;</td>
+            </tr>
+            <tr>
+            <td style="color: blue"> Highschool: Jean Henri Fabre Highschool, France </td>
+            <td style="color: blue" align="right">2013 – 2015</td>
+            </tr>
+            <tr>
+              <td colspan="2">Sciences and Technology of Industry and of Sustainable Development (STI2D) Information and Digital System (SIN) specialty.</td>
+            </tr>
+            
+          </table>
+        </div>
+      </div>
+
     </div>
+
   </div>
 
-  <div class="card2" >
-    <div class="container">
-      <p>"After 3 years of apprenticeship in a mechanical, hydraulic and electrical field I 
-      discovered more deeply during my VIE the software and programming part. Now 
-      I’m looking for a position in an international environment to improve my technical 
-      skills in programming. 
-      If you are looking for someone who wants to learn and not rest on his laurels, 
-      please contact me !"</p>
-      <h4><b>Professional experiences</b></h4> 
-      <hr>
-      <table style="width:100%">
-        <tr>
-        <td style="color: blue"> Mechatronics / Software engineer (VIE) </td>
-        <td style="color: blue" align="right">Nov 2020 - Present</td>
-        </tr>
-        <tr>
-          <td colspan="2">Technology and Strategy, Stuttgart, Germany</td>
-        </tr>
-        <tr>
-        <td align="center"> <br> Mechatronics <br> On autonomous mobile robots </td>
-        <td align="left">
-        ▪ Sizing motorisation,<br>
-        ▪ Creation of a CAD model (Solidworks),<br>
-        ▪ Creation of mechanical parts with 3D printer for an active steering.<br></td>
-        </tr>
-        <tr>
-        <td align="center"> <br> Software <br> On an AI labelling software</td>
-        <td align="left">
-          <br>
-        ▪ Implementing new graphics features for the user (Python),<br>
-        ▪ Improvement of the UI/UX (Qt),<br>
-        ▪ Development of a software tool to facilitate the data labelling process
-        (Python),<br>
-        ▪ DevOps : Ensure cross-platform use of the software,<br>
-        ▪ Redaction of the research tax credit paper.<br></td>
-        </tr>
-
-        <tr>
-        <td style="color: blue"> Methods, maintenance, and new works unit (apprenticeship) </td>
-        <td style="color: blue" align="right">Sept 2017 – Sept 2020</td>
-        </tr>
-        <tr>
-          <td colspan="2">Foure Lagadec (nuclear field), France</td>
-        </tr>
-        <tr>
-        <td align="center"> <br> Methods unit <br></td>
-        <td align="left">
-        ▪ Research of the cause of breakdowns thanks to the maintenance data,
-        drawings, wiring diagrams, hydraulic schematics, functional analyzes,
-        etc ...<br>
-        ▪ Propose improvements on the production devices to avoid breakdowns,<br>
-        ▪ Writing feedbacks regarding the problems encountered during
-        maintenance operations from a technical, safety, security and working
-        conditions point of view,<br>
-        ▪ Writing health care systems in order to detect ageing, obsolescence and
-        early signs of equipment malfunction and to programme maintenance,
-        renovation and replacement actions accordingly.<br></td>
-        </tr>
-        <tr>
-        <td align="center"> <br> New works unit <br></td>
-        <td align="left">
-          <br>
-        ▪ Drafting commercial and technical offers in response to calls for tenders
-        on multidisciplinary projects (mechanics, electrical, hydraulics, and
-        programmable industrial controllers),<br>
-        ▪ Research of the feasibility and the necessary technologies on projects
-        (multidisciplinary sizing),<br>
-        ▪ Sizing mechanical parts, motorization group, hydraulic cylinders,
-        hydraulic systems,<br>
-        ▪ Creation of electrical control boxes,<br>
-        ▪ Modification of a PLC program: Ladder language,<br>
-        ▪ Creation of mechanical drawings (2D, 3D), wiring diagrams and
-        hydraulic schematics,<br>
-        ▪ Contact with suppliers for the adaptation and purchase of equipment,<br>
-        ▪ Management and installation of projects on site with technicians and
-        project manager.<br></td>
-        </tr>
-      </table>
-    </div>
-  </div>
-
-  <div class="card3" >
-    <div class="container">
-      <table style="width:100%">
-        <td colspan="2"><h4><b>Professional experiences</b></h4> <hr></td>
-        <tr>
-        <td style="color: blue"> Vokabellernen </td>
-        <td style="color: blue" align="right">On going</td>
-        </tr>
-        <tr>
-          <td colspan="2">Application with Qt and C++ connected to a PhpMyAdmin database to record and translate words in English/French/German.
-          The application randomly chooses a word in English/French or German, the user translates it and thus learns it. You can also
-          choose to guess the article (das/der/die) or the plural form of a noun</td>
-        </tr>
-        <td colspan="2"><h4><b>Engineering school projects</b></h4> <hr></td>
-        <tr>
-        <td colspan="2" style="color: blue"> Design of a mobile robot prototype for the investigation of nuclear areas </td>
-        </tr>
-        <tr>
-          <td colspan="2">Project for the CEA (French Alternative Energies and Atomic Energy Commission). The innovation on this robot was to be able 
-          to change the size of the mobile base during use. To do this, we integrated an electrical cylinder on the base. There are also 
-          two caterpillars, one on the left and one on the right, and “flippers” at the front for climbing stairs.</td>
-        </tr>
-        <tr>
-          <td align="left">
-          <br>
-          ▪ Systems engineering (Core software):
-          System definition: Needs, requirements, stakeholders, life cycle, functional and organic architectures,
-          Validation and verification of the system definition,
-          Testing and validation of sensors and actuators programs.<br>
-          ▪ Machining of mechanical parts (CNC turning lathe, tapping, drilling, etc),<br>
-          ▪ Creation of a control loop for the position of the cylinder rod according to the angle values returned by the
-          gyroscopic/accelerometer sensor installed on a front flipper. This allowed me to stretch the robot’s caterpillars during use
-          even if the flippers change their angular position (Programming with C language, Nvidia Jetson Nano).
-          <br></td>
-        </tr>
-        <tr>
-        <td colspan="2" style="color: blue"> Technical projects</td>
-        </tr>
-        <tr>
-          <td colspan="2">Programming a mobile robot with LabVIEW. We were moving the robot thanks to a joystick for an obstacle race.<br>
-          Programming a FPGA on a mobile robot with VHDL. There were 2 different modes: to follow a line and to combat like a Sumo.</td>
-        </tr>
-      </table>
-    </div>
-  </div>
-
-  <div class="card4" >
-    <div class="container">
-      <table style="width:100%">
-        <td colspan="2"><h4><b>Education</b></h4> <hr></td>
-        <tr>
-        <td style="color: blue"> OpenClassrooms certificate: C ++ training</td>
-        <td style="color: blue" align="right">2021</td>
-        </tr>
-        <tr>
-        <td style="color: blue"> Engineering diploma: Ecole des mines d’Alès, France </td>
-        <td style="color: blue" align="right">2017 - 2020</td>
-        </tr>
-        <tr>
-          <td colspan="2">Mechatronics Systems department. Training in apprenticeship.</td>
-        </tr>
-        <tr>
-        <td style="color: blue">Preparatory classes before engineering school: Jean Baptiste Dumas Highschool, France </td>
-        <td style="color: blue" align="right">2015 – 2017</td>
-        </tr>
-        <tr>
-          <td colspan="2">Technology and Industrial sciences training to prepare competitive exams to access an engineering school;</td>
-        </tr>
-        <tr>
-        <td style="color: blue"> Highschool: Jean Henri Fabre Highschool, France </td>
-        <td style="color: blue" align="right">2013 – 2015</td>
-        </tr>
-        <tr>
-          <td colspan="2">Sciences and Technology of Industry and of Sustainable Development (STI2D) Information and Digital System (SIN) specialty.</td>
-        </tr>
-        
-      </table>
-  </div>
-</div>
-
-<div class="containerBottom">
 </div>
 
 <script>
-  function openNav() {
-  document.getElementById("mySidenav").style.display = "block";
-  document.getElementById("main2").style.marginLeft = "0px";
-}
 
-function closeNav() {
-  document.getElementById("mySidenav").style.display = "none";
-  document.getElementById("main2").style.marginLeft= "-200px";
-}
+  function openNavNoResize() {
+      document.getElementById("sideBarNoResize").style.display = "block";
+      document.getElementById("mouvement").style.marginLeft = "200px";
+    }
 
-  function openNav2() {
-  document.getElementById("mySidenavResize").style.display = "block";
-}
+  function closeNavNoResize() {
+      document.getElementById("sideBarNoResize").style.display = "none";
+      document.getElementById("mouvement").style.marginLeft= "0px";
+    }
 
-function closeNav2() {
-  document.getElementById("mySidenavResize").style.display = "none";
-  document.getElementById("mySidenav").style.display = "none";
-}
-</script>
+  function openNavResize() {
+      document.getElementById("mySidenavResize").style.display = "block";
+    }
+
+  function closeNavResize() {
+      document.getElementById("mySidenavResize").style.display = "none";
+      document.getElementById("sideBarNoResize").style.display = "none";
+    }
+
+  </script>
 
 </body>
 </html>
