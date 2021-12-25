@@ -7,267 +7,286 @@
   <!-- Link for style -->
   <link rel="stylesheet" href="style.css">
 </head>
+
 <style>
 
-body {
-  background-color:rgb(255, 135, 12);
-  margin-bottom: 100px;
-}
-
-@media screen and (max-width: 1000px){
-  .sidenav {width: 0px;}
-  #btn {display: none;}
-  #closebtn1 {display: none;}
-}
-@media screen and (min-width: 999px){
-  #btn2 {display: none;}
-  #closebtn2 {display: none;}
-}
-
-.aller {
-  animation-direction: normal;
-  animation-duration: 2s;
-  animation-name: glissement;
-  text-align: center;
-  position: relative;
-  margin-top: 200px;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-/* Create four equal columns that floats next to each other */
-.column {
-  float: left;
-  width: 20%;
-  padding: 10px;
-}
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-@keyframes glissement {
-  from {
-    transform: translateY(-500px);
+  .wrapperAll {
+    display: grid;
+    grid-template-columns: 1fr;
   }
-  to {
-    transform: translateY(0px);
+
+  .wrapperCard {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-column-gap: 50px;
+    grid-row-gap: 10px;
+    margin-right: auto;
+    margin-left: auto;
+    justify-items: center;
+    align-items: center;
   }
-}
-@keyframes glissements {
-  from {
-    transform: translateY(-500px);
+
+  #mouvement {
+    transition: margin-left .5s;
+    padding: 20px;
   }
-  to {
-    transform: translateY(0px);
+
+  .aller {
+    animation-direction: normal;
+    animation-duration: 2s;
+    animation-name: glissement;
+    text-align: center;
+    position: relative;
+    margin-top: 200px;
   }
-}
 
-.hide{
-    display:none;
-}
+  .hide{
+      display:none;
+  }
 
-.show{
-    display:inline-block;
-}
-/* Style the tab content */
-.tabcontent {
-  float: left;
-  padding: 0px 12px;
-  border: 1px solid #ccc;
-  width: 70%;
-  border-left: none;
-  height: 300px;
-  display: none;
-}
-#London {
-}
+  .show{
+      display:inline-block;
+  }
 
-.card {
-  box-shadow: 0 10px 8px 0 rgba(0,0,0,0.2);
-  width: 300px;
-  background-color: white;
-  margin-left: 400px;
-  padding-bottom: 30px;
-}
+  .card {
+    box-shadow: 0 10px 8px 0 rgba(0,0,0,0.2);
+    width: 300px;
+    background-color: white;
+    margin-left: 400px;
+    padding-bottom: 30px;
+  }
 
-.container {
-  padding: 2px 16px;
-  font-family:'Arial';
-  font-size: 100%;
-}
+  .container {
+    padding: 2px 16px;
+    font-family:'Arial';
+    font-size: 100%;
+  }
+
+  @keyframes glissement {
+    from {
+      transform: translateY(-500px);
+    }
+    to {
+      transform: translateY(0px);
+    }
+  }
+  @keyframes glissements {
+    from {
+      transform: translateY(-500px);
+    }
+    to {
+      transform: translateY(0px);
+    }
+  }
+
+  @media screen and (max-width: 1000px){
+    #openBtnNoResize {display: none;}
+    #mySidenavResize {display: none;}
+  }
+
+  @media screen and (min-width: 999px){
+    #openBtnResize {display: none;}
+    #mySidenavResize {width: 0px;}
+  }
 
 </style>
 
-<div id="btn">
-  <span style="font-size:30px; padding-left: 50px; color:white ; font-family:'Arial'; cursor:pointer" onclick="openNav()">&#9776; open</span>
-</div>
+<body style="background-color:rgb(255, 135, 12);">
 
-<div id="btn2">
-  <span style="font-size:30px; padding-left: 50px; color:white ; font-family:'Arial'; cursor:pointer" onclick="openNav2()">&#9776; open2</span>
-</div>
-
-
-<div id="mySidenav" class="sidenav">
-  <a href="javascript:void(0)" class="closebtn" id="closebtn1" onclick="closeNav()">&times;</a>
-  <a href="javascript:void(0)" class="closebtn" id="closebtn2" onclick="closeNav2()">&times;</a>
-  <a href="testPage.html">
-    <i class="fa fa-fw fa-home"></i>
-    <p>Home</p>
-  </a>
-  <a href="about.html">
-    <i class="fa fa-user"></i> 
-    <p>About</p>
-  </a>
-  <a href="resume.html">
-    <i class="fa fa-wrench"></i> 
-    <p>Resume</p>
-  </a>
-  <a href="hobbies.html">
-    <i class="  fa fa-puzzle-piece"></i> 
-    <p>Hobbies</p>
-  </a>
-  <a href="contact.html">
-    <i class="fa fa-address-book-o"></i> 
-    <p>Contact</p>
-  </a>
-</div>
-
-<div class="note">
-  <h1> My hobbies</h1>
-</div>
-
-<div class="containerBottom">
-</div>
-
-<div class="row">
-  <div class="column">
-    <button class="tablinks" onmouseover="hobbiesTab('photography')" style="background-color:rgb(255, 135, 12); border:none; height:50px"> <div class="aller" style="display:inline-block"><img src="docs/assets/img/camera.png" alt="Agathe avatar" width="40%"></div></button>
+  <div id="openBtnNoResize">
+    <span style="font-size:30px; padding-left: 50px; color:white ; font-family:'Arial'; cursor:pointer" onclick="openNavNoResize()">&#9776; Menu</span>
   </div>
-  <div class="column">
-    <button class="tablinks" onmouseover="hobbiesTab('hiking')" style="background-color:rgb(255, 135, 12); border:none" >
-    <div id="test" class="hide"><img src="docs/assets/img/hikking.png" alt="Agathe avatar" width="40%"></div></button>
+
+  <div id="openBtnResize">
+    <span style="font-size:30px; padding-left: 50px; color:white ; font-family:'Arial'; cursor:pointer" onclick="openNavResize()">&#9776; Menu</span>
   </div>
-  <div class="column">
-    <button class="tablinks" onmouseover="hobbiesTab('travel')" style="background-color:rgb(255, 135, 12); border:none" >
-    <div id="test2" class="hide"><img src="docs/assets/img/plane.png" alt="Agathe avatar" width="40%"></div>
+
+  <div id="sideBarNoResize" class="sidenav" style="display: none;">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNavNoResize()">&times;</a>
+      <a href="index.html">
+        <i class="fa fa-fw fa-home"></i>
+        <p>Home</p>
+      </a>
+      <a href="about.html">
+        <i class="fa fa-user"></i> 
+        <p>About</p>
+      </a>
+      <a href="resume.html">
+        <i class="fa fa-wrench"></i> 
+        <p>Resume</p>
+      </a>
+      <a href="hobbies.html">
+        <i class="  fa fa-puzzle-piece"></i> 
+        <p>Hobbies</p>
+      </a>
+      <a href="contact.html">
+        <i class="fa fa-address-book-o"></i> 
+        <p>Contact</p>
+      </a>
   </div>
-  <div class="column">
-    <button class="tablinks" onmouseover="hobbiesTab('running')" style="background-color:rgb(255, 135, 12); border:none" >
-    <div id="test3" class="hide"><img src="docs/assets/img/running.png" alt="Agathe avatar" width="40%"></div>
+
+  <div id="mySidenavResize" class="sidenav" style="display: none;">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNavResize()">&times;</a>
+      <a href="index.html">
+        <i class="fa fa-fw fa-home"></i>
+        <p>Home</p>
+      </a>
+      <a href="about.html">
+        <i class="fa fa-user"></i> 
+        <p>About</p>
+      </a>
+      <a href="resume.html">
+        <i class="fa fa-wrench"></i> 
+        <p>Resume</p>
+      </a>
+      <a href="hobbies.html">
+        <i class="  fa fa-puzzle-piece"></i> 
+        <p>Hobbies</p>
+      </a>
+      <a href="contact.html">
+        <i class="fa fa-address-book-o"></i> 
+        <p>Contact</p>
+      </a>
   </div>
-  <div class="column">
-    <button class="tablinks" onmouseover="hobbiesTab('hulahoop')" style="background-color:rgb(255, 135, 12); border:none" >
-    <div id="test4" class="hide"><img src="docs/assets/img/hulahoop.png" alt="Agathe avatar" width="80%"></div>
+
+  <div id="mouvement">
+
+    <div class="note">
+      <h1> My hobbies</h1>
+    </div>
+
+    <div class="wrapperAll">
+
+      <div class="wrapperCard">
+
+        <div>
+        <button class="tablinks" onmouseover="hobbiesTab('photography')" style="background-color:rgb(255, 135, 12); border:none; height:50px"> <div class="aller" style="display:inline-block"><img src="docs/assets/img/camera.png" alt="Agathe avatar" width="40%"></div></button>
+        </div>
+        <div>
+          <button class="tablinks" onmouseover="hobbiesTab('hiking')" style="background-color:rgb(255, 135, 12); border:none" >
+          <div id="hikkingDisplacement" class="hide"><img src="docs/assets/img/hikking.png" alt="Agathe avatar" width="40%"></div></button>
+        </div>
+        <div>
+          <button class="tablinks" onmouseover="hobbiesTab('travel')" style="background-color:rgb(255, 135, 12); border:none" >
+          <div id="travelDisplacement" class="hide"><img src="docs/assets/img/plane.png" alt="Agathe avatar" width="40%"></div>
+        </div>
+        <div>
+          <button class="tablinks" onmouseover="hobbiesTab('running')" style="background-color:rgb(255, 135, 12); border:none" >
+          <div id="runningDisplacement" class="hide"><img src="docs/assets/img/running.png" alt="Agathe avatar" width="40%"></div>
+        </div>
+        <div>
+          <button class="tablinks" onmouseover="hobbiesTab('hulahoop')" style="background-color:rgb(255, 135, 12); border:none" >
+          <div id="hulahhopDisplacement" class="hide"><img src="docs/assets/img/hulahoop.png" alt="Agathe avatar" width="80%"></div>
+        </div>
+
+      </div>
+
+    </div>
+
+  <div class="note" id="photography" style="display: none">
+    <h3>PHOTOGRAPHY</h3>
+    <p class="note">I started this passion in high school with a photography club. As I was also riding, I liked to photograph horses and riders during their sessions to learn how to take pictures with movement. Now I like to photograph landscapes.</p>
+    <div><img src="docs/assets/img/landscapeSwitzerland.jpg" alt="Agathe avatar" width="100%"></div>
   </div>
-</div>
+  <div class="note" id="hiking" style="display: none">
+    <h3>HIKING</h3>
+    <p>Here are some pictures of my hikes</p>
+    <div><img src="docs/assets/img/landscapeAustria.JPG" alt="Agathe avatar" width="100%"></div>
+    <div><img src="20200807_072255.JPG" alt="Agathe avatar" width="100%"></div>
+  </div>
+  <div class="note" id="travel" style="display: none">
+    <h3>TRAVEL</h3>
+    <p>On the map you can see the country that I visited.</p>
+    <div><img src="docs/assets/img/map.png" alt="Agathe avatar" width="100%"></div>
+    <p>I stayed in Europe. My goal now is to visit other continents and discover new habits and customs. I want to work in these countries to have a complete experience.</p>
+  </div>
+  <div class="note" id="running" style="display: none">
+    <h3>RUNNING</h3>
+    <p class="note">Running is the sport I have been doing since I was 20 years old.  
+    Being in a very sporty engineering school I wanted to try a sport that is easy to do. 
+    During my first race, after one kilometre, I was out of breath. At the age of 20, this was a turning point for me. How can I be young and unable to run? Since that day I have not stopped except for injuries. 
+    I don't do it for competitive purposes. It simply allows me to breathe after a busy day and to surpass myself day after day, overcoming barriers. 
+    It also makes me feel more revitalised and productive during the day.</p>
+  </div>
+  <div class="note" id="hulahoop" style="display: none">
+    <h3>HULAHOOP</h3>
+    <p class="note">After injuring my knees while running, I saw the hulahoop challenge on social media. The goal was simply to practice hulahooping for 30 minutes every day. It seemed like a good cardio alternative to running. I was not wrong! My abdominal, leg and arm muscles became stronger. My body became toned very quickly.</p>
+  </div>
 
-<div class="note" id="photography" style="display: none">
-  <h3>PHOTOGRAPHY</h3>
-  <p class="note">I started this passion in high school with a photography club. As I was also riding, I liked to photograph horses and riders during their sessions to learn how to take pictures with movement. Now I like to photograph landscapes.</p>
-  <div><img src="docs/assets/img/landscapeSwitzerland.jpg" alt="Agathe avatar" width="100%"></div>
-</div>
-<div class="note" id="hiking" style="display: none">
-  <h3>HIKING</h3>
-  <p>Here are some pictures of my hikes</p>
-  <div><img src="docs/assets/img/landscapeAustria.JPG" alt="Agathe avatar" width="100%"></div>
-  <div><img src="20200807_072255.JPG" alt="Agathe avatar" width="100%"></div>
-</div>
-<div class="note" id="travel" style="display: none">
-  <h3>TRAVEL</h3>
-  <p>On the map you can see the country that I visited.</p>
-  <div><img src="docs/assets/img/map.png" alt="Agathe avatar" width="100%"></div>
-  <p>I stayed in Europe. My goal now is to visit other continents and discover new habits and customs. I want to work in these countries to have a complete experience.</p>
-</div>
-<div class="note" id="running" style="display: none">
-  <h3>RUNNING</h3>
-  <p class="note">Running is the sport I have been doing since I was 20 years old.  
-Being in a very sporty engineering school I wanted to try a sport that is easy to do. 
-During my first race, after one kilometre, I was out of breath. At the age of 20, this was a turning point for me. How can I be young and unable to run? Since that day I have not stopped except for injuries. 
-I don't do it for competitive purposes. It simply allows me to breathe after a busy day and to surpass myself day after day, overcoming barriers. 
-It also makes me feel more revitalised and productive during the day.</p>
-</div>
-<div class="note" id="hulahoop" style="display: none">
-  <h3>HULAHOOP</h3>
-  <p class="note">After injuring my knees while running, I saw the hulahoop challenge on social media. The goal was simply to practice hulahooping for 30 minutes every day. It seemed like a good cardio alternative to running. I was not wrong! My abdominal, leg and arm muscles became stronger. My body became toned very quickly.</p>
-</div>
+  </div>
 
-<script>
-  function openNav() {
-  document.getElementById("mySidenav").style.width = "200px";
-  document.getElementById("main2").style.marginLeft = "0px";
-}
+  <script>
+    function openNavNoResize() {
+    document.getElementById("sideBarNoResize").style.display = "block";
+    document.getElementById("mouvement").style.marginLeft = "200px";
+    }
 
-function closeNav() {
-  document.getElementById("mySidenav").style.width = "0";
-  document.getElementById("main2").style.marginLeft= "-200px";
-}
+    function closeNavNoResize() {
+      document.getElementById("sideBarNoResize").style.display = "none";
+      document.getElementById("mouvement").style.marginLeft= "0px";
+    }
 
-  function openNav2() {
-  document.getElementById("mySidenav").style.width = "200px";
-}
+    function openNavResize() {
+      document.getElementById("mySidenavResize").style.display = "block";
+    }
 
-function closeNav2() {
-  document.getElementById("mySidenav").style.width = "0";
-}
+    function closeNavResize() {
+      document.getElementById("mySidenavResize").style.display = "none";
+      document.getElementById("sideBarNoResize").style.display = "none";
+    }
 
-window.onload=function()  //executes when the page finishes loading
-{
-    setTimeout(func1, 2000);  //sets a timer which calls function func1 after 2,000 milliseconds = 2 secs.
-    setTimeout(func2, 2000);
-    setTimeout(func3, 4000);  //sets a timer which calls function func1 after 2,000 milliseconds = 2 secs.
-    setTimeout(func4, 4000);
-    setTimeout(func5, 6000);  //sets a timer which calls function func1 after 2,000 milliseconds = 2 secs.
-    setTimeout(func6, 6000);  //sets a timer which calls function func1 after 2,000 milliseconds = 2 secs.
-    setTimeout(func7, 8000);  //sets a timer which calls function func1 after 2,000 milliseconds = 2 secs.
-    setTimeout(func8, 8000);  //sets a timer which calls function func1 after 2,000 milliseconds = 2 secs.
-};
-function func1()
-{
-    document.getElementById("test").className="show";
-}
-function func2()
-{
-    document.getElementById("test").className="aller";
-}
-function func3()
-{
-    document.getElementById("test2").className="show";
-}
-function func4()
-{
-    document.getElementById("test2").className="aller";
-}
-function func5()
-{
-    document.getElementById("test3").className="show";
-}
-function func6()
-{
-    document.getElementById("test3").className="aller";
-}
-function func7()
-{
-    document.getElementById("test4").className="show";
-}
-function func8()
-{
-    document.getElementById("test4").className="aller";
-}
-function hobbiesTab(name) {
-    document.getElementById("photography").style.display="none";
-    document.getElementById("hiking").style.display="none";
-    document.getElementById("travel").style.display="none";
-    document.getElementById("running").style.display="none";
-    document.getElementById("hulahoop").style.display="none";
-    document.getElementById(name).style.display="inline-block";
-}
-</script>
+    window.onload=function()  //executes when the page finishes loading
+    {
+        setTimeout(func1, 2000);  //sets a timer which calls function func1 after 2,000 milliseconds = 2 secs.
+        setTimeout(func2, 2000);
+        setTimeout(func3, 4000);  //sets a timer which calls function func1 after 2,000 milliseconds = 2 secs.
+        setTimeout(func4, 4000);
+        setTimeout(func5, 6000);  //sets a timer which calls function func1 after 2,000 milliseconds = 2 secs.
+        setTimeout(func6, 6000);  //sets a timer which calls function func1 after 2,000 milliseconds = 2 secs.
+        setTimeout(func7, 8000);  //sets a timer which calls function func1 after 2,000 milliseconds = 2 secs.
+        setTimeout(func8, 8000);  //sets a timer which calls function func1 after 2,000 milliseconds = 2 secs.
+    };
+    function func1()
+    {
+        document.getElementById("hikkingDisplacement").className="show";
+    }
+    function func2()
+    {
+        document.getElementById("hikkingDisplacement").className="aller";
+    }
+    function func3()
+    {
+        document.getElementById("travelDisplacement").className="show";
+    }
+    function func4()
+    {
+        document.getElementById("travelDisplacement").className="aller";
+    }
+    function func5()
+    {
+        document.getElementById("runningDisplacement").className="show";
+    }
+    function func6()
+    {
+        document.getElementById("runningDisplacement").className="aller";
+    }
+    function func7()
+    {
+        document.getElementById("hulahhopDisplacement").className="show";
+    }
+    function func8()
+    {
+        document.getElementById("hulahhopDisplacement").className="aller";
+    }
+    function hobbiesTab(name) {
+        document.getElementById("photography").style.display="none";
+        document.getElementById("hiking").style.display="none";
+        document.getElementById("travel").style.display="none";
+        document.getElementById("running").style.display="none";
+        document.getElementById("hulahoop").style.display="none";
+        document.getElementById(name).style.display="inline-block";
+    }
+  </script>
 
 </body>
 </html>
