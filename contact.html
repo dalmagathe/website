@@ -1,68 +1,40 @@
 
 <!DOCTYPE html>
 <html>
+
 <head>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<title>Agathe DALMAZIR</title>
+  <!-- Link for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Link for style -->
+  <link rel="stylesheet" href="style.css">
+
+  <title>Agathe DALMAZIR Website</title>
 </head>
+
 <style>
-.note {
-  font-family:'Arial';
-  font-size: 150%;
-  color: black;
-}
-.sidenav {
-  height: 100%;
-  width: 200px;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: #111;
-  overflow-x: hidden;
-  padding-top: 80px;
-  transition: 0.5s;
 
+.wrapperAll {
+  display: grid;
+  grid-template-columns: 1fr;
 }
 
-.sidenav a {
-  font-family:'Arial';
-  padding: 6px 6px 6px 0px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #818181;
-  display: block;
-  text-align: center;
-  transition: 0.3s;
-  size: 1000px;
+.wrapperCard {
+  display: grid;
+  grid-template-columns: 300px 580px;
+  grid-column-gap: 50px;
+  grid-row-gap: 10px;
+  margin-right: auto;
+  margin-left: auto;
+  justify-items: center;
+  align-items: center;
 }
 
-.sidenav a:hover {
-  color: #f1f1f1;
-  background-color: orange;
+#mouvement {
+  transition: margin-left .5s;
+  padding: 20px;
 }
 
-.sidenav .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
-}
-
-#btn {
-}
-
-#btn2 {
-}
-#closebtn1 {
-  background-color: black;
-}
-#closebtn2 {
-  background-color: black;
-}
-
-.box {
+.text {
   display: flex;
   align-items:center;
   font-family:'Arial';
@@ -70,204 +42,148 @@
   color: black;
 }
 
-#main2 {
-  transition: margin-left .5s;
-  padding: 20px;
-}
-.container {
-  padding: 2px 16px;
-  font-family:'Arial';
-  font-size: 100%;
-  text-align: none;
-  position: absolute;
-}
-.cardBig {
-  position: relative;
-  padding-bottom: 30px;
-  height: 1000px;
-  width: 1100px;
-}
-
-.cardBigReisze {
-  position: relative;
-  padding-bottom: 30px;
-  height: 900px;
-  width: 600px;
-}
-.card {
+.cardText {
   position: relative;
   box-shadow: 0 10px 8px 0 rgba(0,0,0,0.2);
   background-color: white;
-  margin-top: -700px;
-  padding-bottom: 30px;
   height: 600px;
   width: 580px;
-  margin-left: 400px;
+  padding: 2px 16px;
+  font-family:'Arial';
+  font-size: 100%;
 }
 .cardImage {
   position: relative;
-  padding-top: 100px;
   width: 300px;
   align-items: center;
 }
-.cardImageResize {
-  position: relative;
-  text-align: center;
-}
-.resize{
-}
-
-#mySidenav {
-}
-
-#mySidenavResize {
-}
 
 @media screen and (max-width: 1000px){
-  .cardBigReisze{margin-right: auto; margin-left: auto;}
-  .card{margin-left: 10px; margin-top: -320px;}
-  .cardImage {display: none;}
-  .cardBig{display: none;}
-  #btn {display: none;}
+  #openBtnNoResize {display: none;}
   #mySidenavResize {display: none;}
+  .wrapperCard{grid-template-columns: 1fr;}
+  .cardImage{grid-row-start: 1;grid-row-end: 2;}
+  .cardText{grid-row-start: 2;grid-row-end: 3;}
 }
 @media screen and (min-width: 999px){
-  .cardBig{margin-right: auto; margin-left: auto;}
-  .resize{display: none;}
-    #btn2 {display: none;}
-    #mySidenavResize {width: 0px;}
-    #mySidenav {display: block;}
+  #openBtnResize {display: none;}
+  #mySidenavResize {width: 0px;}
+  .wrapperCard{grid-template-columns: 300px 580px;}
+  .cardImage{grid-row-start: 1;grid-row-end: 2;}
+  .cardText{grid-row-start: 1;grid-row-end: 2;}
 }
 
 </style>
 
 <body style="background-color:rgb(255, 135, 12);">
 
-<div id="btn">
-  <span style="font-size:30px; padding-left: 50px; color:white ; font-family:'Arial'; cursor:pointer" onclick="openNav()">&#9776; Menu</span>
-</div>
+  <div id="openBtnNoResize">
+    <span style="font-size:30px; padding-left: 50px; color:white ; font-family:'Arial'; cursor:pointer" onclick="openNavNoResize()">&#9776; Menu</span>
+  </div>
 
-<div id="btn2">
-  <span style="font-size:30px; padding-left: 50px; color:white ; font-family:'Arial'; cursor:pointer" onclick="openNav2()">&#9776; Menu</span>
-</div>
+  <div id="openBtnResize">
+    <span style="font-size:30px; padding-left: 50px; color:white ; font-family:'Arial'; cursor:pointer" onclick="openNavResize()">&#9776; Menu</span>
+  </div>
 
-<div id="main2">
-  <div class="resize">
-    <div class="cardBigReisze">
-      <div class="cardImageResize" >
-          <p id="imgTest"><img src="contactPhoto.png" alt="Agathe avatar" width="500px" ></p>
-      </div>
-      <div class="card">
-          <div class="container">
-            <h1><b>GET IN TOUCH</b></h1> 
-            <hr color="orange" width="500px" align="left" size="10px">
-            <div class="box">
-              <p class="note"><img src="house.jpg" alt="house"><p align="center">Suttgart, Germany</p>
-            </div>
-            <div class="box">
-              <p class="note" ><img src="letter.jpg" alt="house"><p align="center">dalmagathe@gmail.com</p>
-            </div>
-            <div class="box">
-              <p class="note"><img src="phone.jpg" alt="house"><p align="center">+33 (0)662981097</p>
-            </div>
+  <div id="mouvement">
+
+    <div class="wrapperAll">
+
+      <div class="wrapperCard">
+
+        <div class="cardImage">
+          <p id="imgTest"><img src="docs/assets/img/contactAvatar.png" alt="Agathe avatar" width="300px"></p>
+        </div>
+
+        <div class="cardText" >
+          <br>
+          <h1><b>GET IN TOUCH</b></h1> 
+          <hr color="orange" width="500px" align="left" size="10px">
+          <div class="text">
+            <p><img src="house.jpg" alt="house"><p align="center">Suttgart, Germany</p>
           </div>
+          <div class="text">
+            <p><img src="letter.jpg" alt="house"><p align="center">dalmagathe@gmail.com</p>
+          </div>
+          <div class="text">
+            <p><img src="phone.jpg" alt="house"><p align="center">+33 (0)662981097</p>
+          </div>
+        </div>
+        
       </div>
+
     </div>
+
   </div>
-  <div class="cardBig">
-    <div class="cardImage" >
-      <p id="imgTest"><img src="contactPhoto.png" alt="Agathe avatar" width="500px"></p>
-    </div>
-    <div class="card" >
-      <div class="container">
-        <br>
-        <h1><b>GET IN TOUCH</b></h1> 
-        <hr color="orange" width="500px" align="left" size="10px">
-        <div class="box">
-          <p class="note"><img src="house.jpg" alt="house"><p align="center">Suttgart, Germany</p>
-        </div>
-        <div class="box">
-          <p class="note" ><img src="letter.jpg" alt="house"><p align="center">dalmagathe@gmail.com</p>
-        </div>
-        <div class="box">
-          <p class="note"><img src="phone.jpg" alt="house"><p align="center">+33 (0)662981097</p>
-        </div>
-      </div>
-    </div>
+
+  <div id="sideBarNoResize" class="sidenav" style="display: none;">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNavNoResize()">&times;</a>
+        <a href="index.html">
+          <i class="fa fa-fw fa-home"></i>
+          <p>Home</p>
+        </a>
+        <a href="about.html">
+          <i class="fa fa-user"></i> 
+          <p>About</p>
+        </a>
+        <a href="resume.html">
+          <i class="fa fa-wrench"></i> 
+          <p>Resume</p>
+        </a>
+        <a href="hobbies.html">
+          <i class="  fa fa-puzzle-piece"></i> 
+          <p>Hobbies</p>
+        </a>
+        <a href="contact.html">
+          <i class="fa fa-address-book-o"></i> 
+          <p>Contact</p>
+        </a>
   </div>
-</div>
 
-<div id="mySidenav" class="sidenav" style="display: none;">
-    <a href="javascript:void(0)" class="closebtn" id="closebtn1" onclick="closeNav()">&times;</a>
-    <a href="index.html">
-      <i class="fa fa-fw fa-home"></i>
-      <p>Home</p>
-    </a>
-    <a href="about.html">
-      <i class="fa fa-user"></i> 
-      <p>About</p>
-    </a>
-    <a href="resume.html">
-      <i class="fa fa-wrench"></i> 
-      <p>Resume</p>
-    </a>
-    <a href="hobbies.html">
-      <i class="  fa fa-puzzle-piece"></i> 
-      <p>Hobbies</p>
-    </a>
-    <a href="contact.html">
-      <i class="fa fa-address-book-o"></i> 
-      <p>Contact</p>
-    </a>
-</div>
+  <div id="mySidenavResize" class="sidenav" style="display: none;">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNavResize()">&times;</a>
+        <a href="index.html">
+          <i class="fa fa-fw fa-home"></i>
+          <p>Home</p>
+        </a>
+        <a href="about.html">
+          <i class="fa fa-user"></i> 
+          <p>About</p>
+        </a>
+        <a href="resume.html">
+          <i class="fa fa-wrench"></i> 
+          <p>Resume</p>
+        </a>
+        <a href="hobbies.html">
+          <i class="  fa fa-puzzle-piece"></i> 
+          <p>Hobbies</p>
+        </a>
+        <a href="contact.html">
+          <i class="fa fa-address-book-o"></i> 
+          <p>Contact</p>
+        </a>
+  </div>
 
-<div id="mySidenavResize" class="sidenav" style="display: none;">
-  <a href="javascript:void(0)" class="closebtn" id="closebtn2" onclick="closeNav2()">&times;</a>
-  <a href="index.html">
-    <i class="fa fa-fw fa-home"></i>
-    <p>Home</p>
-  </a>
-  <a href="about.html">
-    <i class="fa fa-user"></i> 
-    <p>About</p>
-  </a>
-  <a href="resume.html">
-    <i class="fa fa-wrench"></i> 
-    <p>Resume</p>
-  </a>
-  <a href="hobbies.html">
-    <i class="  fa fa-puzzle-piece"></i> 
-    <p>Hobbies</p>
-  </a>
-  <a href="contact.html">
-    <i class="fa fa-address-book-o"></i> 
-    <p>Contact</p>
-  </a>
-</div>
+  <script>
+        function openNavNoResize() {
+        document.getElementById("sideBarNoResize").style.display = "block";
+        document.getElementById("mouvement").style.marginLeft = "200px";
+      }
 
-<script>
-  function openNav() {
-  document.getElementById("mySidenav").style.display = "block";
-  document.getElementById("main2").style.marginLeft = "200px";
-}
+      function closeNavNoResize() {
+        document.getElementById("sideBarNoResize").style.display = "none";
+        document.getElementById("mouvement").style.marginLeft= "0px";
+      }
 
-function closeNav() {
-  document.getElementById("mySidenav").style.display = "none";
-  document.getElementById("main2").style.marginLeft= "0px";
-}
+        function openNavResize() {
+        document.getElementById("mySidenavResize").style.display = "block";
+      }
 
-  function openNav2() {
-  document.getElementById("mySidenavResize").style.display = "block";
-}
-
-function closeNav2() {
-  document.getElementById("mySidenavResize").style.display = "none";
-  document.getElementById("mySidenav").style.display = "none";
-}
-</script>
-
-
-
+      function closeNavResize() {
+        document.getElementById("mySidenavResize").style.display = "none";
+        document.getElementById("sideBarNoResize").style.display = "none";
+      }
+  </script>
 
 </body>
 </html>
