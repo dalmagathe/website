@@ -18,9 +18,17 @@
 	  transition: margin-left .5s;
 	}
 
-	@media screen and (max-width: 1000px){
+	@media screen and (min-width: 813px) and (max-width: 1000px){
 	  #openBtnNoResize {display: none;}
 	  #mySidenavResize {display: none;}
+	  #pageContent {background-color: pink;}
+	}
+
+	@media screen and (max-width: 812px){
+	  #openBtnNoResize {display: none;}
+	  #mySidenavResize {display: none;}
+	  #pageContent {background-color: black;}
+	  .sidenav {transition: width 2s; width : 100%;}
 	}
 
 	@media screen and (min-width: 999px){
@@ -38,7 +46,7 @@
 	</div>
 
 	<div id="openBtnResize">
-	  <span style="font-size:30px; padding-left: 50px; color:white ; font-family:'Arial'; cursor:pointer" onclick="openNavResize()">&#9776; Menu</span>
+	  <span style="font-size:30px; padding-left: 50px; color:white ; font-family:'Arial'; cursor:pointer; font-size: 60px;" onclick="openNavResize()">&#9776; Menu</span>
 	</div>
 
 	<div id="pageContent">
