@@ -18,13 +18,13 @@
 	  transition: margin-left .5s;
 	}
 
-	@media screen and (min-width: 813px) and (max-width: 1000px){
+	@media screen and (min-width: 850px) and (max-width: 1000px){
 	  #openBtnNoResize {display: none;}
 	  #mySidenavResize {display: none;}
 	  #pageContent {background-color: pink;}
 	}
 
-	@media screen and (max-width: 812px){
+	@media screen and (max-width: 849px){
 	  #openBtnNoResize {display: none;}
 	  #mySidenavResize {display: none;}
 	  #pageContent {background-color: black;}
@@ -120,6 +120,7 @@
 
 		  function openNavResize() {
 		  document.getElementById("mySidenavResize").style.display = "block";
+		  document.getElementById("mySidenavResize").style.transition = "2s";
 		}
 
 		function closeNavResize() {
