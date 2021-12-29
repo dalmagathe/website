@@ -26,14 +26,13 @@
 
 	@media only screen and (max-device-width : 950px) {
 	  #openBtnNoResize {display: none;}
-	  #mySidenavResize {display: none;}
-	  #openBtnResize {font-size: 60px;}
+	  #openBtnResize {display: none;}
 	  .sidenav {width: 100%; padding-top: 50px;}
 	  .sidenav a {font-size: 50px;}
 	}
 
 	@media screen and (min-width: 999px){
-	  #openBtnResize {display: none;}
+	  #openBtnPhone {display: none;}
 	  #openBtnNoResize {display: none;}
 	}
 
@@ -42,15 +41,15 @@
 <body style="background-color:rgb(255, 135, 12);">
 
 	<div id="openBtnNoResize">
-	  <span style="font-size:30px; padding-left: 50px; color:white ; font-family:'Arial'; cursor:pointer" onclick="openNavNoResize()">&#9776; Menu</span>
+	  <span style="font-size:30px; padding-left: 50px; color:white ; font-family:'Arial'; cursor:pointer" onclick="openNavNoResize()">&#9776; Menu1</span>
 	</div>
 
 	<div id="openBtnResize">
-	  <span style="font-size:30px; padding-left: 50px; color:white ; font-family:'Arial'; cursor:pointer;" onclick="openNavResize()">&#9776; Menu</span>
+	  <span style="font-size:30px; padding-left: 50px; color:white ; font-family:'Arial'; cursor:pointer;" onclick="openNavResize()">&#9776; Menu2</span>
 	</div>
 
 	<div id="openBtnPhone">
-	  <span style="font-size:50px; padding-left: 50px; color:white ; font-family:'Arial'; cursor:pointer;" onclick="openNavResize()">&#9776; Menu</span>
+	  <span style="font-size:50px; padding-left: 50px; color:white ; font-family:'Arial'; cursor:pointer;" onclick="openNavResize()">&#9776; Menu3</span>
 	</div>
 
 	<div id="pageContent">
