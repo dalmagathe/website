@@ -15,19 +15,20 @@
 	left: 0;
 	background-color: #111;
 	overflow-x: hidden;
-	padding-top: 80px;
+	padding-top: 2.5%;
 }
 
 /* Menu links in the sidebr */
 .sidenav a {
 	font-family:'Arial';
-	height: 100px;
-  	padding: 20px 6px 6px 0px; /* T R B L */
+	height: 19.5%;
+  	padding: 0px; /* T R B L */
 	text-decoration: none;
 	font-size: 25px;
 	color: #818181;
-	display: block;
-	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 /* Mouse hover on sidebar */
