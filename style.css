@@ -21,7 +21,7 @@
 /* Menu links in the sidebr */
 .sidenav a {
 	font-family:'Arial';
-	height: 100px;
+	height: 200px;
   	padding: 20px 6px 6px 0px; /* T R B L */
 	text-decoration: none;
 	font-size: 25px;
