@@ -21,7 +21,7 @@
 	@media screen and (max-width: 1000px){
 	  #openBtnNoResize {display: none;}
 	  #mySidenavResize {display: none;}
-	  #sideBarPhone {display: none;}
+	  #openBtnPhone {display: none;}
 	}
 
 	@media only screen and (max-device-width : 950px) {
@@ -34,7 +34,7 @@
 
 	@media screen and (min-width: 999px){
 	  #openBtnResize {display: none;}
-	  #sideBarPhone {display: none;}
+	  #openBtnNoResize {display: none;}
 	}
 
 </style>
@@ -47,6 +47,10 @@
 
 	<div id="openBtnResize">
 	  <span style="font-size:30px; padding-left: 50px; color:white ; font-family:'Arial'; cursor:pointer;" onclick="openNavResize()">&#9776; Menu</span>
+	</div>
+
+	<div id="openBtnPhone">
+	  <span style="font-size:50px; padding-left: 50px; color:white ; font-family:'Arial'; cursor:pointer;" onclick="openNavResize()">&#9776; Menu</span>
 	</div>
 
 	<div id="pageContent">
