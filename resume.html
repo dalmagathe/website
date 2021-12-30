@@ -13,6 +13,7 @@
   font-family:'Arial';
   font-size: 20px;
 }
+
 .wrapperAll {
   display: grid;
   grid-template-columns: 1fr;
@@ -73,13 +74,15 @@ body {
 
   @media screen and (max-width: 1000px){
     #openBtnNoResize {display: none;}
+    #openBtnPhone {display: none;}
     #mySidenav {width: 0px;}
     #mySidenavResize {display: block;}
-    .wrapperCard {margin-right: 10px; margin-left: 10px; grid-template-columns: 300px 1fr;}
-    
+    .wrapperCard {margin-right: 10px; margin-left: 10px; grid-template-columns: 300px 1fr;}  
   }
+
   @media screen and (min-width: 999px){
     #openBtnResize {display: none;}
+    #openBtnPhone {display: none;}
     #mySidenavResize {width: 0px;}
     #mySidenav {display: block;}
     .wrapperCard {margin-right: auto; margin-left: auto; grid-template-columns: 300px 1000px;}
@@ -96,8 +99,8 @@ body {
     .professionalExp {grid-row-start: 4; grid-row-end: 4;}
     .projects {grid-row-start: 5; grid-row-end: 5;}
     .education {grid-row-start: 6; grid-row-end: 6;}
+    .styleText {font-size: 60px;}
   }
-
 
 </style>
 
@@ -210,7 +213,7 @@ body {
       <a href="contact.html">
         <div style="justify-content: center; text-align: center;">
           <i class="fa fa-address-book-o"></i> 
-          <p>Contact7</p>
+          <p>Contact8</p>
         </div>
       </a>
   </div>
