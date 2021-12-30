@@ -67,19 +67,27 @@ body {
   margin-bottom: 100px;
 }
 
-@media screen and (max-width: 1000px){
-  #openBtnNoResize {display: none;}
-  #mySidenav {width: 0px;}
-  #mySidenavResize {display: block;}
-  .wrapperCard {margin-right: 10px; margin-left: 10px; grid-template-columns: 300px 1fr;}
-  
-}
-@media screen and (min-width: 999px){
-  #openBtnResize {display: none;}
-  #mySidenavResize {width: 0px;}
-  #mySidenav {display: block;}
-  .wrapperCard {margin-right: auto; margin-left: auto; grid-template-columns: 300px 1000px;}
-}
+  @media screen and (max-width: 1000px){
+    #openBtnNoResize {display: none;}
+    #mySidenav {width: 0px;}
+    #mySidenavResize {display: block;}
+    .wrapperCard {margin-right: 10px; margin-left: 10px; grid-template-columns: 300px 1fr;}
+    
+  }
+  @media screen and (min-width: 999px){
+    #openBtnResize {display: none;}
+    #mySidenavResize {width: 0px;}
+    #mySidenav {display: block;}
+    .wrapperCard {margin-right: auto; margin-left: auto; grid-template-columns: 300px 1000px;}
+  }
+
+  @media only screen and (max-device-width : 950px) {
+    #openBtnNoResize {display: none;}
+    #openBtnResize {display: none;}
+    #openBtnPhone {display: block;}
+    .sidenav {width: 100%; padding-top: 16%;}
+    .sidenav a {font-size: 50px; padding-top: 20px; height: 16.8%;}
+  }
 
 
 </style>

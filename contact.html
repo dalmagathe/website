@@ -57,20 +57,27 @@
   align-items: center;
 }
 
-@media screen and (max-width: 1000px){
-  #openBtnNoResize {display: none;}
-  #mySidenavResize {display: none;}
-  .wrapperCard{grid-template-columns: 1fr;}
-  .cardImage{grid-row-start: 1;grid-row-end: 2;}
-  .cardText{grid-row-start: 2;grid-row-end: 3;}
-}
-@media screen and (min-width: 999px){
-  #openBtnResize {display: none;}
-  #mySidenavResize {width: 0px;}
-  .wrapperCard{grid-template-columns: 300px 580px;}
-  .cardImage{grid-row-start: 1;grid-row-end: 2;}
-  .cardText{grid-row-start: 1;grid-row-end: 2;}
-}
+  @media screen and (max-width: 1000px){
+    #openBtnNoResize {display: none;}
+    #mySidenavResize {display: none;}
+    .wrapperCard{grid-template-columns: 1fr;}
+    .cardImage{grid-row-start: 1;grid-row-end: 2;}
+    .cardText{grid-row-start: 2;grid-row-end: 3;}
+  }
+  @media screen and (min-width: 999px){
+    #openBtnResize {display: none;}
+    #mySidenavResize {width: 0px;}
+    .wrapperCard{grid-template-columns: 300px 580px;}
+    .cardImage{grid-row-start: 1;grid-row-end: 2;}
+    .cardText{grid-row-start: 1;grid-row-end: 2;}
+  }
+  @media only screen and (max-device-width : 950px) {
+    #openBtnNoResize {display: none;}
+    #openBtnResize {display: none;}
+    #openBtnPhone {display: block;}
+    .sidenav {width: 100%; padding-top: 16%;}
+    .sidenav a {font-size: 50px; padding-top: 20px; height: 16.8%;}
+  }
 
 </style>
 
